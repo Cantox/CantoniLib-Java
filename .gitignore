@@ -1,0 +1,4 @@
+CantoniLibrary/*
+!CantoniLibrary/src
+!CantoniLibrary/src/**
+!CantoniLibrary/src/**/*.java
