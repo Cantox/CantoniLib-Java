@@ -1,6 +1,6 @@
 package Main;
 
-import CantoniLib.Rand;
+import CantoniLib.*;
 
 public class Main {
         public static void main(String[] args) {
@@ -13,6 +13,11 @@ public class Main {
                 System.out.println();
                 
                 System.out.println("d4: " + Rand.d4() + "\nd6: " + Rand.d6() + "\nd8: " + Rand.d8() + "\nd10: " + Rand.d10() + "\nd12: " + Rand.d12() + "\nd20: " + Rand.d20() + "\nd50: " + Rand.d50() + "\nd100: " + Rand.d100() + "\n");
+                
+                float[] vet = {1,2,3,4,5};
+                Vet.print(vet, 2);
+                System.out.println();
+                Vet.print(vet,"\n");
         }
         
 }
