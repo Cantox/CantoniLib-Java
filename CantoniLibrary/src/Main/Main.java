@@ -4,6 +4,12 @@ import CantoniLib.*;
 
 public class Main {
         public static void main(String[] args) {
+                do{
+                        for(int i=(int)'0'; i<=(int)'z'+10; i++)
+                                System.out.println((char)i + "   " + i);
+                        System.out.println("\n");
+                }while(1==2);
+                
                 System.out.println("Byte: " + Rand.newByte((byte)0, (byte)1));
                 System.out.println("Short: " + Rand.newShort((short)0, (short)1));
                 System.out.println("Int: " + Rand.newInt(0, 5));
@@ -81,6 +87,65 @@ public class Main {
                 System.out.println();
                 Vet.print(boolArr);
                 System.out.println();
+                do{
+                        char[] c = new char[50];
+                        System.out.print("Fill letters: ");
+                        Vet.fillLetters(c);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill letters: ");
+                        Vet.sort(c);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill letters (upperCase): ");
+                        Vet.fillLetters(c,true);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill letters (upperCase): ");
+                        Vet.sort(c);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill letters (lowerCase): ");
+                        Vet.fillLetters(c, false);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill letters (lowerCase): ");
+                        Vet.sort(c);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill number: ");
+                        Vet.fillNumbers(c);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill number: ");
+                        Vet.sort(c);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill alphanumerical: ");
+                        Vet.fillAlphanumerical(c);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill alphanumerical: ");
+                        Vet.sort(c);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill alphanumerical (upperCase): ");
+                        Vet.fillAlphanumerical(c,true);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill alphanumerical (upperCase): ");
+                        Vet.sort(c);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill alphanumerical (lowerCase): ");
+                        Vet.fillAlphanumerical(c,false);
+                        Vet.print(c);
+                        System.out.println();
+                        System.out.print("Fill alphanumerical (lowerCase): ");
+                        Vet.sort(c);
+                        Vet.print(c);
+                        System.out.println();
+                }while(1==2);
                 System.out.println();
                 System.out.println("------------------------------------------");
                 System.out.println();
