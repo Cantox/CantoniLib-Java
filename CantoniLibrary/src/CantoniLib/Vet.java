@@ -5,12 +5,13 @@ import java.text.DecimalFormatSymbols;
 import java.util.Locale;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 
 public class Vet {
         private static final Random r = new Random();
         private static final DecimalFormatSymbols usSymbols = DecimalFormatSymbols.getInstance(Locale.US);
+        
+        // REVIEW DOCS AND ADD OTHER EXEPTIONS, CURRENTLY THERE IS ONLY THE VETT == NULL.
         
         /**
         * Generates a random index for an array of a given length.
@@ -943,8 +944,11 @@ public class Vet {
         *
         * @param vett the {@code byte} array to fill
         * @param value the value to assign to each element of the array
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fill(byte[] vett, byte value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = value;
         }
@@ -955,8 +959,11 @@ public class Vet {
         *
         * @param vett the {@code short} array to fill
         * @param value the value to assign to each element of the array
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fill(short[] vett, short value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = value;
         }
@@ -967,8 +974,11 @@ public class Vet {
         *
         * @param vett the {@code int} array to fill
         * @param value the value to assign to each element of the array
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fill(int[] vett, int value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = value;
         }
@@ -979,8 +989,11 @@ public class Vet {
         *
         * @param vett the {@code long} array to fill
         * @param value the value to assign to each element of the array
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fill(long[] vett, long value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = value;
         }
@@ -991,8 +1004,11 @@ public class Vet {
         *
         * @param vett the {@code float} array to fill
         * @param value the value to assign to each element of the array
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fill(float[] vett, float value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = value;
         }
@@ -1003,8 +1019,11 @@ public class Vet {
         *
         * @param vett the {@code double} array to fill
         * @param value the value to assign to each element of the array
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fill(double[] vett, double value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = value;
         }
@@ -1015,8 +1034,11 @@ public class Vet {
         *
         * @param vett the {@code char} array to fill
         * @param value the value to assign to each element of the array
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fill(char[] vett, char value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = value;
         }
@@ -1027,8 +1049,11 @@ public class Vet {
         *
         * @param vett the {@code boolean} array to fill
         * @param value the value to assign to each element of the array
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fill(boolean[] vett, boolean value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = value;
         }
@@ -1044,11 +1069,11 @@ public class Vet {
         * @param max the maximum value (inclusive)
         *
         * @throws IllegalArgumentException if {@code max} is less than {@code min}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillRandom(byte[] vett, byte min, byte max){
-                if (max < min)
-                        throw new IllegalArgumentException("max < min");
-                
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (max < min) throw new IllegalArgumentException("max < min");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = (byte) (r.nextInt(max - min + 1) + min);
         }
@@ -1063,11 +1088,11 @@ public class Vet {
         * @param max the maximum value (inclusive)
         *
         * @throws IllegalArgumentException if {@code max} is less than {@code min}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillRandom(short[] vett, short min, short max){
-                if (max < min)
-                        throw new IllegalArgumentException("max < min");
-                
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (max < min) throw new IllegalArgumentException("max < min");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = (short) (r.nextInt(max - min + 1) + min);
         }
@@ -1082,11 +1107,11 @@ public class Vet {
         * @param max the maximum value (inclusive)
         *
         * @throws IllegalArgumentException if {@code max} is less than {@code min}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillRandom(int[] vett, int min, int max){
-                if (max < min)
-                        throw new IllegalArgumentException("max < min");
-                
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (max < min) throw new IllegalArgumentException("max < min");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = r.nextInt((max-min) + 1) + min;
         }
@@ -1101,11 +1126,11 @@ public class Vet {
         * @param max the maximum value (inclusive)
         *
         * @throws IllegalArgumentException if {@code max} is less than {@code min}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillRandom(long[] vett, long min, long max){
-                if (max < min)
-                        throw new IllegalArgumentException("max < min");
-                
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (max < min) throw new IllegalArgumentException("max < min");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = r.nextLong((max-min)+1) + min;
         }
@@ -1120,11 +1145,11 @@ public class Vet {
         * @param max the upper bound of the range (exclusive)
         *
         * @throws IllegalArgumentException if {@code max} is less than {@code min}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillRandom(float[] vett, float min, float max){
-                if (max < min)
-                        throw new IllegalArgumentException("max < min");
-                
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (max < min) throw new IllegalArgumentException("max < min");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = r.nextFloat() * (max-min) + min;
         }
@@ -1139,11 +1164,11 @@ public class Vet {
         * @param max the upper bound of the range (exclusive)
         *
         * @throws IllegalArgumentException if {@code max} is less than {@code min}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillRandom(double[] vett, double min, double max){
-                if (max < min)
-                        throw new IllegalArgumentException("max < min");
-                
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (max < min) throw new IllegalArgumentException("max < min");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = r.nextDouble() * (max-min) + min;
         }
@@ -1158,11 +1183,11 @@ public class Vet {
         * @param max the maximum value (inclusive)
         *
         * @throws IllegalArgumentException if {@code max} is less than {@code min}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillRandom(char[] vett, char min, char max){
-                if (max < min)
-                        throw new IllegalArgumentException("max < min");
-                
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (max < min) throw new IllegalArgumentException("max < min");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = (char) (r.nextInt((max-min) + 1) + min);
         }
@@ -1175,6 +1200,7 @@ public class Vet {
         * @param vett the {@code boolean} array to fill
         */
         public static void fillRandom(boolean[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = r.nextBoolean();
         }
@@ -1186,8 +1212,11 @@ public class Vet {
         * from {@code 'a'} to {@code 'z'}.
         *
         * @param vett the {@code char} array to fill
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillLetters(char vett[]){
+                if (vett == null) throw new NullPointerException("vett is null");
                 int A = (int)'A', Z = (int)'Z', a = (int)'a', z = (int)'z';
                 int min = A, max = min + (Z-A) + (z-a+1); // Range between A - Z and a - z
                 
@@ -1206,6 +1235,7 @@ public class Vet {
         * @param upperCase if {@code true}, fills with uppercase letters; otherwise lowercase
         */
         public static void fillLetters(char vett[], boolean upperCase){
+                if (vett == null) throw new NullPointerException("vett is null");
                 int minChar = (int)'A', maxChar = (int)'Z';
                 
                 if(!upperCase){
@@ -1220,8 +1250,11 @@ public class Vet {
         * Fills the given {@code char} array with random digits ('0' to '9').
         *
         * @param vett the {@code char} array to fill
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillNumbers(char[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 int min = (int)'0', max = (int)'9';
                 
                 for(int i=0; i<vett.length; i++)
@@ -1232,8 +1265,11 @@ public class Vet {
         * (digits, uppercase letters, and lowercase letters).
         *
         * @param vett the {@code char} array to fill
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillAlphanumerical(char[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 int min = (int)'0', max = min + ((int)'9' - (int)'0') + ((int)'Z' - (int)'A' + 1) + ((int)'z' - (int)'a' + 1);
                 
                 for(int i=0; i<vett.length; i++){
@@ -1255,9 +1291,11 @@ public class Vet {
         *
         * @param vett the {@code char} array to fill
         * @param upperCase if {@code true}, letters will be uppercase; if {@code false}, lowercase
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void fillAlphanumerical(char[] vett, boolean upperCase){
-                
+                if (vett == null) throw new NullPointerException("vett is null");
                 int minChar = (int)'A', maxChar = (int)'Z';
                 
                 if(!upperCase){
@@ -1281,6 +1319,329 @@ public class Vet {
                 }
         }
         
+        // COPY (returns a copy of the array)
+        /**
+        * Returns a new {@code byte} array containing a copy of the elements of the specified array.
+        * <p>
+        * The original array is not modified.
+        *
+        * @param vett the array to copy
+        * @return a new array containing the same elements as {@code vett}
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static byte[] copyOf(byte[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                byte[] vetCopy = new byte[vett.length];
+                System.arraycopy(vett, 0, vetCopy, 0, vett.length);
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code short} array containing a copy of the elements of the specified array.
+        * <p>
+        * The original array is not modified.
+        *
+        * @param vett the array to copy
+        * @return a new array containing the same elements as {@code vett}
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static short[] copyOf(short[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                short[] vetCopy = new short[vett.length];
+                System.arraycopy(vett, 0, vetCopy, 0, vett.length);
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code int} array containing a copy of the elements of the specified array.
+        * <p>
+        * The original array is not modified.
+        *
+        * @param vett the array to copy
+        * @return a new array containing the same elements as {@code vett}
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static int[] copyOf(int[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                int[] vetCopy = new int[vett.length];
+                System.arraycopy(vett, 0, vetCopy, 0, vett.length);
+                        return vetCopy;
+        }
+        /**
+        * Returns a new {@code long} array containing a copy of the elements of the specified array.
+        * <p>
+        * The original array is not modified.
+        *
+        * @param vett the array to copy
+        * @return a new array containing the same elements as {@code vett}
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static long[] copyOf(long[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                long[] vetCopy = new long[vett.length];
+                System.arraycopy(vett, 0, vetCopy, 0, vett.length);
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code float} array containing a copy of the elements of the specified array.
+        * <p>
+        * The original array is not modified.
+        *
+        * @param vett the array to copy
+        * @return a new array containing the same elements as {@code vett}
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static float[] copyOf(float[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                float[] vetCopy = new float[vett.length];
+                System.arraycopy(vett, 0, vetCopy, 0, vett.length);
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code double} array containing a copy of the elements of the specified array.
+        * <p>
+        * The original array is not modified.
+        *
+        * @param vett the array to copy
+        * @return a new array containing the same elements as {@code vett}
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static double[] copyOf(double[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                double[] vetCopy = new double[vett.length];
+                System.arraycopy(vett, 0, vetCopy, 0, vett.length);
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code char} array containing a copy of the elements of the specified array.
+        * <p>
+        * The original array is not modified.
+        *
+        * @param vett the array to copy
+        * @return a new array containing the same elements as {@code vett}
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static char[] copyOf(char[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                char[] vetCopy = new char[vett.length];
+                System.arraycopy(vett, 0, vetCopy, 0, vett.length);
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code boolean} array containing a copy of the elements of the specified array.
+        * <p>
+        * The original array is not modified.
+        *
+        * @param vett the array to copy
+        * @return a new array containing the same elements as {@code vett}
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static boolean[] copyOf(boolean[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                boolean[] vetCopy = new boolean[vett.length];
+                System.arraycopy(vett, 0, vetCopy, 0, vett.length);
+                return vetCopy;
+        }
+        
+        /**
+        * Returns a new {@code byte} array containing a copy of the elements of the specified array,
+        * truncated or padded with zeros to obtain the specified length.
+        * <p>
+        * If {@code length} is greater than {@code vett.length}, the extra elements are set to 0.
+        * If {@code length} is smaller, the array is truncated.
+        *
+        * @param vett the array to copy
+        * @param length the desired length of the new array
+        * @return a new array containing the elements of {@code vett}, adjusted to the specified length
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static byte[] copyOf(byte[] vett, int length){
+                if (vett == null) throw new NullPointerException("vett is null");
+                byte[] vetCopy = new byte[length];
+                for(int i=0; i<length; i++){
+                        if(i<vett.length)
+                                vetCopy[i] = vett[i];
+                        else
+                                vetCopy[i] = 0;
+                }
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code short} array containing a copy of the elements of the specified array,
+        * truncated or padded with zeros to obtain the specified length.
+        * <p>
+        * If {@code length} is greater than {@code vett.length}, the extra elements are set to 0.
+        * If {@code length} is smaller, the array is truncated.
+        *
+        * @param vett the array to copy
+        * @param length the desired length of the new array
+        * @return a new array containing the elements of {@code vett}, adjusted to the specified length
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static short[] copyOf(short[] vett, int length){
+                if (vett == null) throw new NullPointerException("vett is null");
+                short[] vetCopy = new short[length];
+                for(int i=0; i<length; i++){
+                        if(i<vett.length)
+                                vetCopy[i] = vett[i];
+                        else
+                                vetCopy[i] = 0;
+                }
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code int} array containing a copy of the elements of the specified array,
+        * truncated or padded with zeros to obtain the specified length.
+        * <p>
+        * If {@code length} is greater than {@code vett.length}, the extra elements are set to 0.
+        * If {@code length} is smaller, the array is truncated.
+        *
+        * @param vett the array to copy
+        * @param length the desired length of the new array
+        * @return a new array containing the elements of {@code vett}, adjusted to the specified length
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static int[] copyOf(int[] vett, int length){
+                if (vett == null) throw new NullPointerException("vett is null");
+                int[] vetCopy = new int[length];
+                for(int i=0; i<length; i++){
+                        if(i<vett.length)
+                                vetCopy[i] = vett[i];
+                        else
+                                vetCopy[i] = 0;
+                }
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code long} array containing a copy of the elements of the specified array,
+        * truncated or padded with zeros to obtain the specified length.
+        * <p>
+        * If {@code length} is greater than {@code vett.length}, the extra elements are set to 0.
+        * If {@code length} is smaller, the array is truncated.
+        *
+        * @param vett the array to copy
+        * @param length the desired length of the new array
+        * @return a new array containing the elements of {@code vett}, adjusted to the specified length
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static long[] copyOf(long[] vett, int length){
+                if (vett == null) throw new NullPointerException("vett is null");
+                long[] vetCopy = new long[length];
+                for(int i=0; i<length; i++){
+                        if(i<vett.length)
+                                vetCopy[i] = vett[i];
+                        else
+                                vetCopy[i] = 0;
+                }
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code float} array containing a copy of the elements of the specified array,
+        * truncated or padded with zeros to obtain the specified length.
+        * <p>
+        * If {@code length} is greater than {@code vett.length}, the extra elements are set to 0.
+        * If {@code length} is smaller, the array is truncated.
+        *
+        * @param vett the array to copy
+        * @param length the desired length of the new array
+        * @return a new array containing the elements of {@code vett}, adjusted to the specified length
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static float[] copyOf(float[] vett, int length){
+                if (vett == null) throw new NullPointerException("vett is null");
+                float[] vetCopy = new float[length];
+                for(int i=0; i<length; i++){
+                        if(i<vett.length)
+                                vetCopy[i] = vett[i];
+                        else
+                                vetCopy[i] = 0;
+                }
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code double} array containing a copy of the elements of the specified array,
+        * truncated or padded with zeros to obtain the specified length.
+        * <p>
+        * If {@code length} is greater than {@code vett.length}, the extra elements are set to 0.
+        * If {@code length} is smaller, the array is truncated.
+        *
+        * @param vett the array to copy
+        * @param length the desired length of the new array
+        * @return a new array containing the elements of {@code vett}, adjusted to the specified length
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static double[] copyOf(double[] vett, int length){
+                if (vett == null) throw new NullPointerException("vett is null");
+                double[] vetCopy = new double[length];
+                for(int i=0; i<length; i++){
+                        if(i<vett.length)
+                                vetCopy[i] = vett[i];
+                        else
+                                vetCopy[i] = 0;
+                }
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code char} array containing a copy of the elements of the specified array,
+        * truncated or padded with the null character '\0' to obtain the specified length.
+        * <p>
+        * If {@code length} is greater than {@code vett.length}, the extra elements are set to '\0'.
+        * If {@code length} is smaller, the array is truncated.
+        *
+        * @param vett the array to copy
+        * @param length the desired length of the new array
+        * @return a new array containing the elements of {@code vett}, adjusted to the specified length
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static char[] copyOf(char[] vett, int length){
+                if (vett == null) throw new NullPointerException("vett is null");
+                char[] vetCopy = new char[length];
+                for(int i=0; i<length; i++){
+                        if(i<vett.length)
+                                vetCopy[i] = vett[i];
+                        else
+                                vetCopy[i] = '\0';
+                }
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code boolean} array containing a copy of the elements of the specified array,
+        * truncated or padded with {@code false} to obtain the specified length.
+        * <p>
+        * If {@code length} is greater than {@code vett.length}, the extra elements are set to {@code false}.
+        * If {@code length} is smaller, the array is truncated.
+        *
+        * @param vett the array to copy
+        * @param length the desired length of the new array
+        * @return a new array containing the elements of {@code vett}, adjusted to the specified length
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static boolean[] copyOf(boolean[] vett, int length){
+                if (vett == null) throw new NullPointerException("vett is null");
+                boolean[] vetCopy = new boolean[length];
+                for(int i=0; i<length; i++){
+                        if(i<vett.length)
+                                vetCopy[i] = vett[i];
+                        else
+                                vetCopy[i] = false;
+                }
+                return vetCopy;
+        }
+        
         // SORT (returns a sorted copy, useful if you need to have the original order and the sorted version)
         /**
         * Returns a sorted copy of the given {@code byte} array in ascending order.
@@ -1288,12 +1649,13 @@ public class Vet {
         * Uses counting sort internally. The original array is not modified.
         *
         * @param vett the {@code byte} array to sort
-        * @return a new array containing the sorted values, or {@code null} if {@code vett} is {@code null}
+        * @return a new array containing the sorted values
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static byte[] sort(byte[] vett) {
-                if(vett == null) return null;
-                
-                byte[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                byte[] vetCopy = copyOf(vett);
                 int[] count = new int[256];
 
                 for (byte b : vetCopy) 
@@ -1312,12 +1674,13 @@ public class Vet {
         * Uses counting sort internally. The original array is not modified.
         *
         * @param vett the {@code short} array to sort
-        * @return a new array containing the sorted values, or {@code null} if {@code vett} is {@code null}
+        * @return a new array containing the sorted values
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static short[] sort(short[] vett) {
-                if(vett == null) return null;
-                
-                short[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                short[] vetCopy = copyOf(vett);
                 int[] count = new int[65536];
 
                 for (short s : vetCopy) 
@@ -1336,12 +1699,13 @@ public class Vet {
         * Uses a 3-way quicksort internally. The original array is not modified.
         *
         * @param vett the {@code int} array to sort
-        * @return a new array containing the sorted values, or {@code null} if {@code vett} is {@code null}
+        * @return a new array containing the sorted values
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] sort(int[] vett) {
-                if(vett == null) return null;
-                
-                int[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                int[] vetCopy = copyOf(vett);
                 if(vetCopy.length < 2) 
                         return vetCopy;
                 quickSort(vetCopy, 0, vetCopy.length - 1);
@@ -1409,12 +1773,13 @@ public class Vet {
         * Uses a 3-way quicksort internally. The original array is not modified.
         *
         * @param vett the {@code long} array to sort
-        * @return a new array containing the sorted values, or {@code null} if {@code vett} is {@code null}
+        * @return a new array containing the sorted values
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static long[] sort(long[] vett) {
-                if(vett == null) return null;
-                
-                long[] vetCopy = Arrays.copyOf(vett,vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                long[] vetCopy = copyOf(vett);
                 if (vetCopy.length < 2) 
                         return vetCopy;
                 quickSort(vetCopy, 0, vetCopy.length - 1);
@@ -1483,12 +1848,13 @@ public class Vet {
         * {@link Float#compare}. The original array is not modified.
         *
         * @param vett the {@code float} array to sort
-        * @return a new array containing the sorted values, or {@code null} if {@code vett} is {@code null}
+        * @return a new array containing the sorted values
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static float[] sort(float[] vett) {
-                if(vett == null) return null;
-                
-                float[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                float[] vetCopy = copyOf(vett);
                 if (vetCopy.length < 2) 
                         return vetCopy;
                 quickSort(vetCopy, 0, vetCopy.length - 1);
@@ -1557,12 +1923,13 @@ public class Vet {
         * {@link Double#compare}. The original array is not modified.
         *
         * @param vett the {@code double} array to sort
-        * @return a new array containing the sorted values, or {@code null} if {@code vett} is {@code null}
+        * @return a new array containing the sorted values
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static double[] sort(double[] vett) {
-                if(vett == null) return null;
-                
-                double[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                double[] vetCopy = copyOf(vett);
                 if (vetCopy.length < 2)
                         return vetCopy;
                 quickSort(vetCopy, 0, vetCopy.length - 1);
@@ -1630,12 +1997,13 @@ public class Vet {
         * Uses counting sort internally. The original array is not modified.
         *
         * @param vett the {@code char} array to sort
-        * @return a new array containing the sorted values, or {@code null} if {@code vett} is {@code null}
+        * @return a new array containing the sorted values
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static char[] sort(char[] vett) {
-                if(vett == null) return null;
-                
-                char[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                char[] vetCopy = copyOf(vett);
                 int[] count = new int[65536];
 
                 for (char c : vetCopy) 
@@ -1655,12 +2023,13 @@ public class Vet {
         * is not modified.
         *
         * @param vett the {@code boolean} array to sort
-        * @return a new array containing the sorted values, or {@code null} if {@code vett} is {@code null}
+        * @return a new array containing the sorted values
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static boolean[] sort(boolean[] vett) {
-                if(vett == null) return null;
-                
-                boolean[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                boolean[] vetCopy = copyOf(vett);
                 int falseCount = 0;
                 for(boolean b : vetCopy)
                         if(!b) 
@@ -1677,12 +2046,13 @@ public class Vet {
         * The original array is not modified. If {@code vett} is {@code null}, {@code null} is returned.
         *
         * @param vett the array to sort
-        * @return a new array sorted in descending order, or {@code null} if the input is {@code null}
+        * @return a new array sorted in descending order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static byte[] sortDesc(byte[] vett) {
-                if (vett == null) return null;
-
-                byte[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                byte[] vetCopy = copyOf(vett);
                 int[] count = new int[256];
                 for (byte b : vetCopy) 
                         count[b & 0xFF]++;
@@ -1699,12 +2069,13 @@ public class Vet {
          * The original array is not modified. If {@code vett} is {@code null}, {@code null} is returned.
          *
          * @param vett the array to sort
-         * @return a new array sorted in descending order, or {@code null} if the input is {@code null}
+         * @return a new array sorted in descending order
+         * 
+         * @throws IllegalArgumentException if {@code vett} is {@code null}
          */
         public static short[] sortDesc(short[] vett) {
-                if (vett == null) return null;
-                
-                short[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                short[] vetCopy = copyOf(vett);
                 int[] count = new int[65536];
                 for (short s : vetCopy)
                         count[s & 0xFFFF]++;
@@ -1722,12 +2093,13 @@ public class Vet {
         * Uses a modified quicksort algorithm.
         *
         * @param vett the array to sort
-        * @return a new array sorted in descending order, or {@code null} if the input is {@code null}
+        * @return a new array sorted in descending order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] sortDesc(int[] vett) {
-                if (vett == null) return null;
-                
-                int[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                int[] vetCopy = copyOf(vett);
                 if (vetCopy.length < 2) 
                         return vetCopy;
                 quickSortDesc(vetCopy, 0, vetCopy.length - 1);
@@ -1783,12 +2155,13 @@ public class Vet {
         * Uses a modified quicksort algorithm.
         *
         * @param vett the array to sort
-        * @return a new array sorted in descending order, or {@code null} if the input is {@code null}
+        * @return a new array sorted in descending order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static long[] sortDesc(long[] vett) {
-                if (vett == null) return null;
-                
-                long[] copy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                long[] copy = copyOf(vett);
                 if (copy.length < 2) 
                         return copy;
                 quickSortDesc(copy, 0, copy.length - 1);
@@ -1844,12 +2217,13 @@ public class Vet {
         * Uses a modified quicksort algorithm.
         *
         * @param vett the array to sort
-        * @return a new array sorted in descending order, or {@code null} if the input is {@code null}
+        * @return a new array sorted in descending order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static float[] sortDesc(float[] vett) {
-                if (vett == null) return null;
-                
-                float[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                float[] vetCopy = copyOf(vett);
                 if (vetCopy.length < 2) 
                         return vetCopy;
                 quickSortDesc(vetCopy, 0, vetCopy.length - 1);
@@ -1905,12 +2279,13 @@ public class Vet {
          * Uses a modified quicksort algorithm.
          *
          * @param vett the array to sort
-         * @return a new array sorted in descending order, or {@code null} if the input is {@code null}
+         * @return a new array sorted in descending order
+         * 
+         * @throws IllegalArgumentException if {@code vett} is {@code null}
          */
         public static double[] sortDesc(double[] vett) {
-                if (vett == null) return null;
-                
-                double[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                double[] vetCopy = copyOf(vett);
                 if (vetCopy.length < 2) 
                         return vetCopy;
                 quickSortDesc(vetCopy, 0, vetCopy.length - 1);
@@ -1966,12 +2341,13 @@ public class Vet {
         * The original array is not modified. If {@code vett} is {@code null}, {@code null} is returned.
         *
         * @param vett the array to sort
-        * @return a new array sorted in descending order, or {@code null} if the input is {@code null}
+        * @return a new array sorted in descending order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static char[] sortDesc(char[] vett) {
-                if (vett == null) return null;
-                
-                char[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                char[] vetCopy = copyOf(vett);
                 int[] count = new int[65536];
                 for (char c : vetCopy) 
                         count[c]++;
@@ -1988,12 +2364,13 @@ public class Vet {
          * If {@code vett} is {@code null}, {@code null} is returned.
          *
          * @param vett the array to sort
-         * @return a new array sorted in descending order, or {@code null} if the input is {@code null}
+         * @return a new array sorted in descending order
+         * 
+         * @throws IllegalArgumentException if {@code vett} is {@code null}
          */
         public static boolean[] sortDesc(boolean[] vett) {
-                if (vett == null) return null;
-                
-                boolean[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                boolean[] vetCopy = copyOf(vett);
                 int trueCount = 0;
                 for (boolean b : vetCopy) 
                         if (b) 
@@ -2014,8 +2391,11 @@ public class Vet {
         * @param value the value to find
         * @param sortedArray {@code true} if the array is sorted, {@code false} otherwise
         * @return the index of the value, or {@code -1} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int find(byte[] vett, byte value, boolean sortedArray){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(sortedArray){
                         int ind = binarySearch(vett, value);
                         if(ind < 0)
@@ -2040,8 +2420,11 @@ public class Vet {
         * @param value the value to find
         * @param sortedArray {@code true} if the array is sorted, {@code false} otherwise
         * @return the index of the value, or {@code -1} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int find(short[] vett, short value, boolean sortedArray){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(sortedArray){
                         int ind = binarySearch(vett, value);
                         if(ind < 0)
@@ -2066,8 +2449,11 @@ public class Vet {
         * @param value the value to find
         * @param sortedArray {@code true} if the array is sorted, {@code false} otherwise
         * @return the index of the value, or {@code -1} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int find(int[] vett, int value, boolean sortedArray){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(sortedArray){
                         int ind = binarySearch(vett, value);
                         if(ind < 0)
@@ -2092,8 +2478,11 @@ public class Vet {
          * @param value the value to find
          * @param sortedArray {@code true} if the array is sorted, {@code false} otherwise
          * @return the index of the value, or {@code -1} if not found
+         * 
+         * @throws IllegalArgumentException if {@code vett} is {@code null}
          */
         public static int find(long[] vett, long value, boolean sortedArray){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(sortedArray){
                         int ind = binarySearch(vett, value);
                         if(ind < 0)
@@ -2118,8 +2507,11 @@ public class Vet {
         * @param value the value to find
         * @param sortedArray {@code true} if the array is sorted, {@code false} otherwise
         * @return the index of the value, or {@code -1} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int find(float[] vett, float value, boolean sortedArray){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(sortedArray){
                         int ind = binarySearch(vett, value);
                         if(ind < 0)
@@ -2144,8 +2536,11 @@ public class Vet {
         * @param value the value to find
         * @param sortedArray {@code true} if the array is sorted, {@code false} otherwise
         * @return the index of the value, or {@code -1} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int find(double[] vett, double value, boolean sortedArray){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(sortedArray){
                         int ind = binarySearch(vett, value);
                         if(ind < 0)
@@ -2170,8 +2565,11 @@ public class Vet {
         * @param value the value to find
         * @param sortedArray {@code true} if the array is sorted, {@code false} otherwise
         * @return the index of the value, or {@code -1} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int find(char[] vett, char value, boolean sortedArray){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(sortedArray){
                         int ind = binarySearch(vett, value);
                         if(ind < 0)
@@ -2196,8 +2594,11 @@ public class Vet {
         * @param value the value to find
         * @param sortedArray {@code true} if the array is sorted, {@code false} otherwise
         * @return the index of the value, or {@code -1} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int find(boolean[] vett, boolean value, boolean sortedArray){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(sortedArray){
                         int ind = binarySearch(vett, value);
                         if(ind < 0)
@@ -2223,8 +2624,11 @@ public class Vet {
         * @param vett the sorted array to search
         * @param value the value to search for
         * @return the index of the search key, or {@code -(insertion point + 1)} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int binarySearch(byte[] vett, byte value) {
+                if (vett == null) throw new NullPointerException("vett is null");
                 int low = 0;
                 int high = vett.length - 1;
 
@@ -2252,8 +2656,11 @@ public class Vet {
         * @param vett the sorted array to search
         * @param value the value to search for
         * @return the index of the search key, or {@code -(insertion point + 1)} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int binarySearch(short[] vett, short value) {
+                if (vett == null) throw new NullPointerException("vett is null");
                 int low = 0;
                 int high = vett.length - 1;
 
@@ -2281,8 +2688,11 @@ public class Vet {
         * @param vett the sorted array to search
         * @param value the value to search for
         * @return the index of the search key, or {@code -(insertion point + 1)} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int binarySearch(int[] vett, int value) {
+                if (vett == null) throw new NullPointerException("vett is null");
                 int low = 0;
                 int high = vett.length - 1;
 
@@ -2310,8 +2720,11 @@ public class Vet {
         * @param vett the sorted array to search
         * @param value the value to search for
         * @return the index of the search key, or {@code -(insertion point + 1)} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int binarySearch(long[] vett, long value) {
+                if (vett == null) throw new NullPointerException("vett is null");
                 int low = 0;
                 int high = vett.length - 1;
 
@@ -2339,8 +2752,11 @@ public class Vet {
         * @param vett the sorted array to search
         * @param value the value to search for
         * @return the index of the search key, or {@code -(insertion point + 1)} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int binarySearch(float[] vett, float value) {
+                if (vett == null) throw new NullPointerException("vett is null");
                 int low = 0;
                 int high = vett.length - 1;
 
@@ -2370,8 +2786,11 @@ public class Vet {
         * @param vett the sorted array to search
         * @param value the value to search for
         * @return the index of the search key, or {@code -(insertion point + 1)} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int binarySearch(double[] vett, double value) {
+                if (vett == null) throw new NullPointerException("vett is null");
                 int low = 0;
                 int high = vett.length - 1;
 
@@ -2401,8 +2820,11 @@ public class Vet {
         * @param vett the sorted array to search
         * @param value the value to search for
         * @return the index of the search key, or {@code -(insertion point + 1)} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int binarySearch(char[] vett, char value) {
+                if (vett == null) throw new NullPointerException("vett is null");
                 int low = 0;
                 int high = vett.length - 1;
 
@@ -2430,8 +2852,11 @@ public class Vet {
         * @param vett the sorted array to search
         * @param value the value to search for
         * @return the index of the search key, or {@code -(insertion point + 1)} if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int binarySearch(boolean[] vett, boolean value) {
+                if (vett == null) throw new NullPointerException("vett is null");
                 int low = 0;
                 int high = vett.length - 1;
 
@@ -2456,8 +2881,11 @@ public class Vet {
          * @param vett the array to search
          * @param value the value to find
          * @return an array of indexes where {@code value} occurs; empty if not found
+         * 
+         * @throws IllegalArgumentException if {@code vett} is {@code null}
          */
         public static int[] findAll(byte[] vett, byte value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
@@ -2475,8 +2903,11 @@ public class Vet {
         * @param vett the array to search
         * @param value the value to find
         * @return an array of indexes where {@code value} occurs; empty if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] findAll(short[] vett, short value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
@@ -2494,8 +2925,11 @@ public class Vet {
         * @param vett the array to search
         * @param value the value to find
         * @return an array of indexes where {@code value} occurs; empty if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] findAll(int[] vett, int value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
@@ -2513,8 +2947,11 @@ public class Vet {
         * @param vett the array to search
         * @param value the value to find
         * @return an array of indexes where {@code value} occurs; empty if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] findAll(long[] vett, long value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
@@ -2532,8 +2969,11 @@ public class Vet {
         * @param vett the array to search
         * @param value the value to find
         * @return an array of indexes where {@code value} occurs; empty if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] findAll(float[] vett, float value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
@@ -2551,8 +2991,11 @@ public class Vet {
         * @param vett the array to search
         * @param value the value to find
         * @return an array of indexes where {@code value} occurs; empty if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] findAll(double[] vett, double value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
@@ -2570,8 +3013,11 @@ public class Vet {
          * @param vett the array to search
          * @param value the value to find
          * @return an array of indexes where {@code value} occurs; empty if not found
+         * 
+         * @throws IllegalArgumentException if {@code vett} is {@code null}
          */
         public static int[] findAll(char[] vett, char value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
@@ -2589,8 +3035,11 @@ public class Vet {
         * @param vett the array to search
         * @param value the value to find
         * @return an array of indexes where {@code value} occurs; empty if not found
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] findAll(boolean[] vett, boolean value){
+                if (vett == null) throw new NullPointerException("vett is null");
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
@@ -2610,8 +3059,11 @@ public class Vet {
         * @param vett the {@code byte} array to modify
         * @param value the value to be replaced
         * @param newValue the value to replace with
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replace(byte[] vett, byte value, byte newValue){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         if(vett[i] == value)
                                 vett[i] = newValue;
@@ -2622,8 +3074,11 @@ public class Vet {
         * @param vett the {@code short} array to modify
         * @param value the value to be replaced
         * @param newValue the value to replace with
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replace(short[] vett, short value, short newValue){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         if(vett[i] == value)
                                 vett[i] = newValue;
@@ -2634,8 +3089,11 @@ public class Vet {
         * @param vett the {@code int} array to modify
         * @param value the value to be replaced
         * @param newValue the value to replace with
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replace(int[] vett, int value, int newValue){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         if(vett[i] == value)
                                 vett[i] = newValue;
@@ -2646,8 +3104,11 @@ public class Vet {
         * @param vett the {@code long} array to modify
         * @param value the value to be replaced
         * @param newValue the value to replace with
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replace(long[] vett, long value, long newValue){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         if(vett[i] == value)
                                 vett[i] = newValue;
@@ -2658,8 +3119,11 @@ public class Vet {
         * @param vett the {@code float} array to modify
         * @param value the value to be replaced
         * @param newValue the value to replace with
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replace(float[] vett, float value, float newValue){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         if(vett[i] == value)
                                 vett[i] = newValue;
@@ -2670,8 +3134,11 @@ public class Vet {
         * @param vett the {@code double} array to modify
         * @param value the value to be replaced
         * @param newValue the value to replace with
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replace(double[] vett, double value, double newValue){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         if(vett[i] == value)
                                 vett[i] = newValue;
@@ -2682,8 +3149,11 @@ public class Vet {
         * @param vett the {@code char} array to modify
         * @param value the value to be replaced
         * @param newValue the value to replace with
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replace(char[] vett, char value, char newValue){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         if(vett[i] == value)
                                 vett[i] = newValue;
@@ -2694,8 +3164,11 @@ public class Vet {
         * @param vett the {@code boolean} array to modify
         * @param value the value to be replaced (ignored, as all elements are replaced)
         * @param newValue the value to set for all elements
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replace(boolean[] vett, boolean value, boolean newValue){
+                if (vett == null) throw new NullPointerException("vett is null");
                 for(int i=0; i<vett.length; i++)
                         vett[i] = newValue;
         }
@@ -2709,11 +3182,13 @@ public class Vet {
         * @param vett the {@code byte} array to modify
         * @param values the array of values to be replaced
         * @param newValues the array of new values to replace with
+        * 
         * @throws IllegalArgumentException if {@code values.length != newValues.length}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replaceMult(byte[] vett, byte[] values, byte[] newValues){
-                if (values.length != newValues.length)
-                        throw new IllegalArgumentException("values array length != newValues array length");
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (values.length != newValues.length) throw new IllegalArgumentException("values array length != newValues array length");
                 
                 for(int v=0; v<values.length; v++){
                         int[] ind = findAll(vett, values[v]);
@@ -2729,11 +3204,13 @@ public class Vet {
         * @param vett the {@code short} array to modify
         * @param values the array of values to be replaced
         * @param newValues the array of new values to replace with
+        * 
         * @throws IllegalArgumentException if {@code values.length != newValues.length}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replaceMult(short[] vett, short[] values, short[] newValues){
-                if (values.length != newValues.length)
-                        throw new IllegalArgumentException("values array length != newValues array length");
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (values.length != newValues.length) throw new IllegalArgumentException("values array length != newValues array length");
                 
                 for(int v=0; v<values.length; v++){
                         int[] ind = findAll(vett, values[v]);
@@ -2749,11 +3226,13 @@ public class Vet {
         * @param vett the {@code int} array to modify
         * @param values the array of values to be replaced
         * @param newValues the array of new values to replace with
+        * 
         * @throws IllegalArgumentException if {@code values.length != newValues.length}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replaceMult(int[] vett, int[] values, int[] newValues){
-                if (values.length != newValues.length)
-                        throw new IllegalArgumentException("values array length != newValues array length");
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (values.length != newValues.length) throw new IllegalArgumentException("values array length != newValues array length");
                 
                 for(int v=0; v<values.length; v++){
                         int[] ind = findAll(vett, values[v]);
@@ -2769,11 +3248,13 @@ public class Vet {
         * @param vett the {@code long} array to modify
         * @param values the array of values to be replaced
         * @param newValues the array of new values to replace with
+        * 
         * @throws IllegalArgumentException if {@code values.length != newValues.length}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replaceMult(long[] vett, long[] values, long[] newValues){
-                if (values.length != newValues.length)
-                        throw new IllegalArgumentException("values array length != newValues array length");
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (values.length != newValues.length) throw new IllegalArgumentException("values array length != newValues array length");
                 
                 for(int v=0; v<values.length; v++){
                         int[] ind = findAll(vett, values[v]);
@@ -2789,11 +3270,13 @@ public class Vet {
         * @param vett the {@code float} array to modify
         * @param values the array of values to be replaced
         * @param newValues the array of new values to replace with
+        * 
         * @throws IllegalArgumentException if {@code values.length != newValues.length}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replaceMult(float[] vett, float[] values, float[] newValues){
-                if (values.length != newValues.length)
-                        throw new IllegalArgumentException("values array length != newValues array length");
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (values.length != newValues.length) throw new IllegalArgumentException("values array length != newValues array length");
                 
                 for(int v=0; v<values.length; v++){
                         int[] ind = findAll(vett, values[v]);
@@ -2809,11 +3292,13 @@ public class Vet {
         * @param vett the {@code double} array to modify
         * @param values the array of values to be replaced
         * @param newValues the array of new values to replace with
+        * 
         * @throws IllegalArgumentException if {@code values.length != newValues.length}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replaceMult(double[] vett, double[] values, double[] newValues){
-                if (values.length != newValues.length)
-                        throw new IllegalArgumentException("values array length != newValues array length");
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (values.length != newValues.length) throw new IllegalArgumentException("values array length != newValues array length");
                 
                 for(int v=0; v<values.length; v++){
                         int[] ind = findAll(vett, values[v]);
@@ -2829,11 +3314,13 @@ public class Vet {
         * @param vett the {@code char} array to modify
         * @param values the array of values to be replaced
         * @param newValues the array of new values to replace with
+        * 
         * @throws IllegalArgumentException if {@code values.length != newValues.length}
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static void replaceMult(char[] vett, char[] values, char[] newValues){
-                if (values.length != newValues.length)
-                        throw new IllegalArgumentException("values array length != newValues array length");
+                if (vett == null) throw new NullPointerException("vett is null");
+                if (values.length != newValues.length) throw new IllegalArgumentException("values array length != newValues array length");
                 
                 for(int v=0; v<values.length; v++){
                         int[] ind = findAll(vett, values[v]);
@@ -2850,10 +3337,12 @@ public class Vet {
         * 
         * @param vett the array to shuffle
         * @return a new array containing the elements of {@code vett} in random order
-        * @throws IllegalArgumentException if {@code vett} is null
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static byte[] shuffle(byte[] vett){
-                byte[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                byte[] vetCopy = copyOf(vett);
                 for(int i=0; i<30; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -2871,10 +3360,12 @@ public class Vet {
         * 
         * @param vett the array to shuffle
         * @return a new array containing the elements of {@code vett} in random order
-        * @throws IllegalArgumentException if {@code vett} is null
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static short[] shuffle(short[] vett){
-                short[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                short[] vetCopy = copyOf(vett);
                 for(int i=0; i<30; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -2892,10 +3383,12 @@ public class Vet {
         * 
         * @param vett the array to shuffle
         * @return a new array containing the elements of {@code vett} in random order
-        * @throws IllegalArgumentException if {@code vett} is null
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] shuffle(int[] vett){
-                int[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                int[] vetCopy = copyOf(vett);
                 for(int i=0; i<30; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -2913,10 +3406,12 @@ public class Vet {
         * 
         * @param vett the array to shuffle
         * @return a new array containing the elements of {@code vett} in random order
-        * @throws IllegalArgumentException if {@code vett} is null
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static long[] shuffle(long[] vett){
-                long[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                long[] vetCopy = copyOf(vett);
                 for(int i=0; i<30; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -2934,10 +3429,12 @@ public class Vet {
         * 
         * @param vett the array to shuffle
         * @return a new array containing the elements of {@code vett} in random order
-        * @throws IllegalArgumentException if {@code vett} is null
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static float[] shuffle(float[] vett){
-                float[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                float[] vetCopy = copyOf(vett);
                 for(int i=0; i<30; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -2955,10 +3452,12 @@ public class Vet {
         * 
         * @param vett the array to shuffle
         * @return a new array containing the elements of {@code vett} in random order
-        * @throws IllegalArgumentException if {@code vett} is null
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static double[] shuffle(double[] vett){
-                double[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                double[] vetCopy = copyOf(vett);
                 for(int i=0; i<30; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -2976,10 +3475,12 @@ public class Vet {
         * 
         * @param vett the array to shuffle
         * @return a new array containing the elements of {@code vett} in random order
-        * @throws IllegalArgumentException if {@code vett} is null
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static char[] shuffle(char[] vett){
-                char[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                char[] vetCopy = copyOf(vett);
                 for(int i=0; i<30; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -2997,10 +3498,12 @@ public class Vet {
         * 
         * @param vett the array to shuffle
         * @return a new array containing the elements of {@code vett} in random order
-        * @throws IllegalArgumentException if {@code vett} is null
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static boolean[] shuffle(boolean[] vett){
-                boolean[] vetCopy = Arrays.copyOf(vett, vett.length);
+                if (vett == null) throw new NullPointerException("vett is null");
+                boolean[] vetCopy = copyOf(vett);
                 for(int i=0; i<30; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -3020,11 +3523,14 @@ public class Vet {
         * @param vett the array to shuffle
         * @param iterations the number of random swaps to perform
         * @return a new array containing the elements of {@code vett} in shuffled order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static byte[] shuffle(byte[] vett, int iterations){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(iterations<1) iterations = 1;
                 
-                byte[] vetCopy = Arrays.copyOf(vett, vett.length);
+                byte[] vetCopy = copyOf(vett);
                 for(int i=0; i<iterations; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -3043,11 +3549,14 @@ public class Vet {
         * @param vett the array to shuffle
         * @param iterations the number of random swaps to perform
         * @return a new array containing the elements of {@code vett} in shuffled order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static short[] shuffle(short[] vett, int iterations){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(iterations<1) iterations = 1;
                 
-                short[] vetCopy = Arrays.copyOf(vett, vett.length);
+                short[] vetCopy = copyOf(vett);
                 for(int i=0; i<iterations; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -3066,11 +3575,14 @@ public class Vet {
         * @param vett the array to shuffle
         * @param iterations the number of random swaps to perform
         * @return a new array containing the elements of {@code vett} in shuffled order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] shuffle(int[] vett, int iterations){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(iterations<1) iterations = 1;
                 
-                int[] vetCopy = Arrays.copyOf(vett, vett.length);
+                int[] vetCopy = copyOf(vett);
                 for(int i=0; i<iterations; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -3089,11 +3601,14 @@ public class Vet {
         * @param vett the array to shuffle
         * @param iterations the number of random swaps to perform
         * @return a new array containing the elements of {@code vett} in shuffled order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static long[] shuffle(long[] vett, int iterations){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(iterations<1) iterations = 1;
                 
-                long[] vetCopy = Arrays.copyOf(vett, vett.length);
+                long[] vetCopy = copyOf(vett);
                 for(int i=0; i<iterations; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -3112,11 +3627,14 @@ public class Vet {
         * @param vett the array to shuffle
         * @param iterations the number of random swaps to perform
         * @return a new array containing the elements of {@code vett} in shuffled order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static float[] shuffle(float[] vett, int iterations){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(iterations<1) iterations = 1;
                 
-                float[] vetCopy = Arrays.copyOf(vett, vett.length);
+                float[] vetCopy = copyOf(vett);
                 for(int i=0; i<iterations; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -3135,11 +3653,14 @@ public class Vet {
         * @param vett the array to shuffle
         * @param iterations the number of random swaps to perform
         * @return a new array containing the elements of {@code vett} in shuffled order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static double[] shuffle(double[] vett, int iterations){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(iterations<1) iterations = 1;
                 
-                double[] vetCopy = Arrays.copyOf(vett, vett.length);
+                double[] vetCopy = copyOf(vett);
                 for(int i=0; i<iterations; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -3158,11 +3679,14 @@ public class Vet {
         * @param vett the array to shuffle
         * @param iterations the number of random swaps to perform
         * @return a new array containing the elements of {@code vett} in shuffled order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static char[] shuffle(char[] vett, int iterations){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(iterations<1) iterations = 1;
                 
-                char[] vetCopy = Arrays.copyOf(vett, vett.length);
+                char[] vetCopy = copyOf(vett);
                 for(int i=0; i<iterations; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -3181,11 +3705,14 @@ public class Vet {
         * @param vett the array to shuffle
         * @param iterations the number of random swaps to perform
         * @return a new array containing the elements of {@code vett} in shuffled order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static boolean[] shuffle(boolean[] vett, int iterations){
+                if (vett == null) throw new NullPointerException("vett is null");
                 if(iterations<1) iterations = 1;
                 
-                boolean[] vetCopy = Arrays.copyOf(vett, vett.length);
+                boolean[] vetCopy = copyOf(vett);
                 for(int i=0; i<iterations; i++){
                         int ind1 = randomIndex(vetCopy.length), ind2 = randomIndex(vetCopy.length);
                         
@@ -3202,9 +3729,11 @@ public class Vet {
         *
         * @param vett the {@code byte} array from which to pick a random element
         * @return a randomly selected element from {@code vett}
-        * @throws IllegalArgumentException if {@code vett} is null or empty
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static byte pickRandom(byte[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 return vett[randomIndex(vett.length)];
         }
         /**
@@ -3212,9 +3741,11 @@ public class Vet {
         *
         * @param vett the {@code short} array from which to pick a random element
         * @return a randomly selected element from {@code vett}
-        * @throws IllegalArgumentException if {@code vett} is null or empty
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static short pickRandom(short[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 return vett[randomIndex(vett.length)];
         }
         /**
@@ -3222,9 +3753,11 @@ public class Vet {
         *
         * @param vett the {@code int} array from which to pick a random element
         * @return a randomly selected element from {@code vett}
-        * @throws IllegalArgumentException if {@code vett} is null or empty
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int pickRandom(int[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 return vett[randomIndex(vett.length)];
         }
         /**
@@ -3232,9 +3765,11 @@ public class Vet {
         *
         * @param vett the {@code long} array from which to pick a random element
         * @return a randomly selected element from {@code vett}
-        * @throws IllegalArgumentException if {@code vett} is null or empty
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static long pickRandom(long[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 return vett[randomIndex(vett.length)];
         }
         /**
@@ -3242,9 +3777,11 @@ public class Vet {
         *
         * @param vett the {@code float} array from which to pick a random element
         * @return a randomly selected element from {@code vett}
-        * @throws IllegalArgumentException if {@code vett} is null or empty
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static float pickRandom(float[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 return vett[randomIndex(vett.length)];
         }
         /**
@@ -3252,9 +3789,11 @@ public class Vet {
         *
         * @param vett the {@code double} array from which to pick a random element
         * @return a randomly selected element from {@code vett}
-        * @throws IllegalArgumentException if {@code vett} is null or empty
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static double pickRandom(double[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 return vett[randomIndex(vett.length)];
         }
         /**
@@ -3262,9 +3801,11 @@ public class Vet {
         *
         * @param vett the {@code char} array from which to pick a random element
         * @return a randomly selected element from {@code vett}
-        * @throws IllegalArgumentException if {@code vett} is null or empty
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static char pickRandom(char[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 return vett[randomIndex(vett.length)];
         }
         /**
@@ -3272,9 +3813,11 @@ public class Vet {
         *
         * @param vett the {@code boolean} array from which to pick a random element
         * @return a randomly selected element from {@code vett}
-        * @throws IllegalArgumentException if {@code vett} is null or empty
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static boolean pickRandom(boolean[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 return vett[randomIndex(vett.length)];
         }
         
@@ -3286,8 +3829,11 @@ public class Vet {
         *
         * @param vett the array to flip
         * @return a new array containing the elements of {@code vett} in reverse order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static byte[] flip(byte[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
                 byte[] vetCopy = new byte[vett.length];
                 for (int i = 0; i < vett.length; i++)
                     vetCopy[vetCopy.length - 1 - i] = vett[i];
@@ -3300,8 +3846,11 @@ public class Vet {
         *
         * @param vett the array to flip
         * @return a new array containing the elements of {@code vett} in reverse order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static short[] flip(short[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
             short[] vetCopy = new short[vett.length];
             for (int i = 0; i < vett.length; i++)
                 vetCopy[vetCopy.length - 1 - i] = vett[i];
@@ -3314,8 +3863,11 @@ public class Vet {
         *
         * @param vett the array to flip
         * @return a new array containing the elements of {@code vett} in reverse order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static int[] flip(int[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
                 int[] vetCopy = new int[vett.length];
                 for(int i=0; i<vett.length; i++)
                         vetCopy[vetCopy.length-1 - i] = vett[i];
@@ -3328,12 +3880,15 @@ public class Vet {
         *
         * @param vett the array to flip
         * @return a new array containing the elements of {@code vett} in reverse order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static long[] flip(long[] vett) {
-            long[] vetCopy = new long[vett.length];
-            for (int i = 0; i < vett.length; i++)
-                vetCopy[vetCopy.length - 1 - i] = vett[i];
-            return vetCopy;
+                if (vett == null) throw new NullPointerException("vett is null");
+                long[] vetCopy = new long[vett.length];
+                for (int i = 0; i < vett.length; i++)
+                    vetCopy[vetCopy.length - 1 - i] = vett[i];
+                return vetCopy;
         }
         /**
         * Returns a reversed copy of the specified {@code float} array.
@@ -3342,12 +3897,15 @@ public class Vet {
         *
         * @param vett the array to flip
         * @return a new array containing the elements of {@code vett} in reverse order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static float[] flip(float[] vett) {
-            float[] vetCopy = new float[vett.length];
-            for (int i = 0; i < vett.length; i++)
-                vetCopy[vetCopy.length - 1 - i] = vett[i];
-            return vetCopy;
+                if (vett == null) throw new NullPointerException("vett is null");
+                float[] vetCopy = new float[vett.length];
+                for (int i = 0; i < vett.length; i++)
+                    vetCopy[vetCopy.length - 1 - i] = vett[i];
+                return vetCopy;
         }
         /**
         * Returns a reversed copy of the specified {@code double} array.
@@ -3356,12 +3914,15 @@ public class Vet {
         *
         * @param vett the array to flip
         * @return a new array containing the elements of {@code vett} in reverse order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static double[] flip(double[] vett) {
-            double[] vetCopy = new double[vett.length];
-            for (int i = 0; i < vett.length; i++)
-                vetCopy[vetCopy.length - 1 - i] = vett[i];
-            return vetCopy;
+                if (vett == null) throw new NullPointerException("vett is null");
+                double[] vetCopy = new double[vett.length];
+                for (int i = 0; i < vett.length; i++)
+                    vetCopy[vetCopy.length - 1 - i] = vett[i];
+                return vetCopy;
         }
         /**
         * Returns a reversed copy of the specified {@code char} array.
@@ -3370,12 +3931,15 @@ public class Vet {
         *
         * @param vett the array to flip
         * @return a new array containing the elements of {@code vett} in reverse order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static char[] flip(char[] vett) {
-            char[] vetCopy = new char[vett.length];
-            for (int i = 0; i < vett.length; i++)
-                vetCopy[vetCopy.length - 1 - i] = vett[i];
-            return vetCopy;
+                if (vett == null) throw new NullPointerException("vett is null");
+                char[] vetCopy = new char[vett.length];
+                for (int i = 0; i < vett.length; i++)
+                    vetCopy[vetCopy.length - 1 - i] = vett[i];
+                return vetCopy;
         }
         /**
         * Returns a reversed copy of the specified {@code boolean} array.
@@ -3384,13 +3948,337 @@ public class Vet {
         *
         * @param vett the array to flip
         * @return a new array containing the elements of {@code vett} in reverse order
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
         */
         public static boolean[] flip(boolean[] vett) {
-            boolean[] vetCopy = new boolean[vett.length];
-            for (int i = 0; i < vett.length; i++)
-                vetCopy[vetCopy.length - 1 - i] = vett[i];
-            return vetCopy;
+                if (vett == null) throw new NullPointerException("vett is null");
+                boolean[] vetCopy = new boolean[vett.length];
+                for (int i = 0; i < vett.length; i++)
+                    vetCopy[vetCopy.length - 1 - i] = vett[i];
+                return vetCopy;
         }
         
         // SHIFT
+        /**
+        * Returns a new {@code byte} array with all elements shifted one position to the right.
+        * <p>
+        * The last element of the array is moved to the first position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted right by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static byte[] shiftR(byte[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                byte[] vetCopy = copyOf(vett);
+                byte tmp = vetCopy[vetCopy.length-1];
+                for(int i=vetCopy.length-1; i>0; i--)
+                        vetCopy[i] = vetCopy[i-1];
+                vetCopy[0] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code short} array with all elements shifted one position to the right.
+        * <p>
+        * The last element of the array is moved to the first position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted right by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static short[] shiftR(short[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                short[] vetCopy = copyOf(vett);
+                short tmp = vetCopy[vetCopy.length-1];
+                for(int i=vetCopy.length-1; i>0; i--)
+                        vetCopy[i] = vetCopy[i-1];
+                vetCopy[0] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code int} array with all elements shifted one position to the right.
+        * <p>
+        * The last element of the array is moved to the first position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted right by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static int[] shiftR(int[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                int[] vetCopy = copyOf(vett);
+                int tmp = vetCopy[vetCopy.length-1];
+                for(int i=vetCopy.length-1; i>0; i--)
+                        vetCopy[i] = vetCopy[i-1];
+                vetCopy[0] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code long} array with all elements shifted one position to the right.
+        * <p>
+        * The last element of the array is moved to the first position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted right by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static long[] shiftR(long[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                long[] vetCopy = copyOf(vett);
+                long tmp = vetCopy[vetCopy.length-1];
+                for(int i=vetCopy.length-1; i>0; i--)
+                        vetCopy[i] = vetCopy[i-1];
+                vetCopy[0] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code float} array with all elements shifted one position to the right.
+        * <p>
+        * The last element of the array is moved to the first position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted right by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static float[] shiftR(float[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                float[] vetCopy = copyOf(vett);
+                float tmp = vetCopy[vetCopy.length-1];
+                for(int i=vetCopy.length-1; i>0; i--)
+                        vetCopy[i] = vetCopy[i-1];
+                vetCopy[0] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code double} array with all elements shifted one position to the right.
+        * <p>
+        * The last element of the array is moved to the first position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted right by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static double[] shiftR(double[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                double[] vetCopy = copyOf(vett);
+                double tmp = vetCopy[vetCopy.length-1];
+                for(int i=vetCopy.length-1; i>0; i--)
+                        vetCopy[i] = vetCopy[i-1];
+                vetCopy[0] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code char} array with all elements shifted one position to the right.
+        * <p>
+        * The last element of the array is moved to the first position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted right by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static char[] shiftR(char[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                char[] vetCopy = copyOf(vett);
+                char tmp = vetCopy[vetCopy.length-1];
+                for(int i=vetCopy.length-1; i>0; i--)
+                        vetCopy[i] = vetCopy[i-1];
+                vetCopy[0] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code boolean} array with all elements shifted one position to the right.
+        * <p>
+        * The last element of the array is moved to the first position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted right by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static boolean[] shiftR(boolean[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                boolean[] vetCopy = copyOf(vett);
+                boolean tmp = vetCopy[vetCopy.length-1];
+                for(int i=vetCopy.length-1; i>0; i--)
+                        vetCopy[i] = vetCopy[i-1];
+                vetCopy[0] = tmp;
+                return vetCopy;
+        }
+        
+        /**
+        * Returns a new {@code byte} array with all elements shifted one position to the left.
+        * <p>
+        * The first element of the array is moved to the last position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted left by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static byte[] shiftL(byte[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                byte[] vetCopy = copyOf(vett);
+                byte tmp = vetCopy[0];
+                for(int i=0; i<vetCopy.length-1; i++)
+                        vetCopy[i] = vetCopy[i+1];
+                vetCopy[vetCopy.length-1] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code short} array with all elements shifted one position to the left.
+        * <p>
+        * The first element of the array is moved to the last position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted left by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static short[] shiftL(short[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                short[] vetCopy = copyOf(vett);
+                short tmp = vetCopy[0];
+                for(int i=0; i<vetCopy.length-1; i++)
+                        vetCopy[i] = vetCopy[i+1];
+                vetCopy[vetCopy.length-1] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code int} array with all elements shifted one position to the left.
+        * <p>
+        * The first element of the array is moved to the last position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted left by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static int[] shiftL(int[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                int[] vetCopy = copyOf(vett);
+                int tmp = vetCopy[0];
+                for(int i=0; i<vetCopy.length-1; i++)
+                        vetCopy[i] = vetCopy[i+1];
+                vetCopy[vetCopy.length-1] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code long} array with all elements shifted one position to the left.
+        * <p>
+        * The first element of the array is moved to the last position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted left by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static long[] shiftL(long[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                long[] vetCopy = copyOf(vett);
+                long tmp = vetCopy[0];
+                for(int i=0; i<vetCopy.length-1; i++)
+                        vetCopy[i] = vetCopy[i+1];
+                vetCopy[vetCopy.length-1] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code float} array with all elements shifted one position to the left.
+        * <p>
+        * The first element of the array is moved to the last position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted left by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static float[] shiftL(float[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                float[] vetCopy = copyOf(vett);
+                float tmp = vetCopy[0];
+                for(int i=0; i<vetCopy.length-1; i++)
+                        vetCopy[i] = vetCopy[i+1];
+                vetCopy[vetCopy.length-1] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code double} array with all elements shifted one position to the left.
+        * <p>
+        * The first element of the array is moved to the last position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted left by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static double[] shiftL(double[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                double[] vetCopy = copyOf(vett);
+                double tmp = vetCopy[0];
+                for(int i=0; i<vetCopy.length-1; i++)
+                        vetCopy[i] = vetCopy[i+1];
+                vetCopy[vetCopy.length-1] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code char} array with all elements shifted one position to the left.
+        * <p>
+        * The first element of the array is moved to the last position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted left by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static char[] shiftL(char[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                char[] vetCopy = copyOf(vett);
+                char tmp = vetCopy[0];
+                for(int i=0; i<vetCopy.length-1; i++)
+                        vetCopy[i] = vetCopy[i+1];
+                vetCopy[vetCopy.length-1] = tmp;
+                return vetCopy;
+        }
+        /**
+        * Returns a new {@code boolean} array with all elements shifted one position to the left.
+        * <p>
+        * The first element of the array is moved to the last position.
+        * The original array is not modified.
+        *
+        * @param vett the array to shift
+        * @return a new array with elements shifted left by one position
+        * 
+        * @throws IllegalArgumentException if {@code vett} is {@code null}
+        */
+        public static boolean[] shiftL(boolean[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                boolean[] vetCopy = copyOf(vett);
+                boolean tmp = vetCopy[0];
+                for(int i=0; i<vetCopy.length-1; i++)
+                        vetCopy[i] = vetCopy[i+1];
+                vetCopy[vetCopy.length-1] = tmp;
+                return vetCopy;
+        }
 }
