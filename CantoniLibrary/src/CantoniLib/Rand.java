@@ -3,21 +3,13 @@ package CantoniLib;
 import java.util.Random;
 
 /**
- * Utility class providing methods for generating random data of various types.
+ * Utility class offering a collection of methods for generating random values
+ * across different data types.
  *
- * <p>The {@code Rand} class uses an internal instance of {@link java.util.Random} 
- * to generate random values.</p>
+ * <p>All methods rely on an internal instance of {@link java.util.Random} to ensure
+ * consistent and efficient random value generation.</p>
  *
- * <p>All methods in this class are {@code static} and can be called without creating an instance of {@code Rand}.</p>
- *
- * <p>Example usage:</p>
- * <pre>{@code
- * int randomInt = Rand.newInt(1, 100);
- * String randomString = Rand.newStringAlphanumericalMixed(10);
- * boolean lucky = Rand.chance(0.25);
- * int diceRoll = Rand.d6();
- * }</pre>
- * 
+ * <p>This class is intended as a static utility container and should not be instantiated.</p>
  * @author Cantoni Alessandro
  */
 public final class Rand {
