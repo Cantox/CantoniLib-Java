@@ -7,6 +7,8 @@ import java.util.Locale;
 import java.util.ArrayList;
 import java.util.Random;
 
+// ADD DOCS TO MIN, MAX, MEDIAN, AVERAGE AND TOT METHODS
+
 /**
  * Utility class providing a comprehensive set of operations for arrays of all
  * Java primitive data types.
@@ -20,8 +22,11 @@ import java.util.Random;
  * @author Cantoni Alessandro
  */
 public class Arr {
+        /**
+         * Private istance of the {@code Random} class
+         */
         private static final Random r = new Random();
-        private static final DecimalFormatSymbols usSymbols = DecimalFormatSymbols.getInstance(Locale.US);
+        private static final DecimalFormatSymbols usDecimalFormatSymbols = DecimalFormatSymbols.getInstance(Locale.US);
         
         /**
         * Generates a random index for an array of a given length.
@@ -39,7 +44,7 @@ public class Arr {
                 return r.nextInt((max-min) + 1) + min;
         }
         
-        // PRINT (just prints, doesn't modify the array)
+        
         /**
         * Prints the contents of a {@code byte} array to standard output.
         * <p>
@@ -612,7 +617,7 @@ public class Arr {
                 if (decimals < 0) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
-                DecimalFormat df = new DecimalFormat(pattern,usSymbols);
+                DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
 
                 System.out.print(df.format(vett[0]));
                 for(int i=1; i<vett.length; i++)
@@ -647,7 +652,7 @@ public class Arr {
                 if (decimals < 0) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
-                DecimalFormat df = new DecimalFormat(pattern,usSymbols);
+                DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
 
                 System.out.print(df.format(vett[0]));
                 for(int i=1; i<vett.length; i++)
@@ -682,7 +687,7 @@ public class Arr {
                 if(width < 1) width = 0;
                 
                 String pattern = "0." + "0".repeat(decimals);
-                DecimalFormat df = new DecimalFormat(pattern,usSymbols);
+                DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
 
                 String s = Integer.toString((int)vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + df.format(vett[0]));
@@ -725,7 +730,7 @@ public class Arr {
                 if(width < 1) width = 0;
                 
                 String pattern = "0." + "0".repeat(decimals);
-                DecimalFormat df = new DecimalFormat(pattern,usSymbols);
+                DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
 
                 String s = Integer.toString((int)vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + df.format(vett[0]));
@@ -812,7 +817,7 @@ public class Arr {
                 if (decimals < 0) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
-                DecimalFormat df = new DecimalFormat(pattern,usSymbols);
+                DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
 
                 System.out.print(df.format(vett[0]));
                 for(int i=1; i<vett.length; i++)
@@ -847,7 +852,7 @@ public class Arr {
                 if (decimals < 0) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
-                DecimalFormat df = new DecimalFormat(pattern,usSymbols);
+                DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
 
                 System.out.print(df.format(vett[0]));
                 for(int i=1; i<vett.length; i++)
@@ -882,7 +887,7 @@ public class Arr {
                 if(width < 1) width = 0;
                 
                 String pattern = "0." + "0".repeat(decimals);
-                DecimalFormat df = new DecimalFormat(pattern,usSymbols);
+                DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
 
                 String s = Integer.toString((int)vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + df.format(vett[0]));
@@ -925,7 +930,7 @@ public class Arr {
                 if(width < 1) width = 0;
                 
                 String pattern = "0." + "0".repeat(decimals);
-                DecimalFormat df = new DecimalFormat(pattern,usSymbols);
+                DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
 
                 String s = Integer.toString((int)vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + df.format(vett[0]));
@@ -1162,7 +1167,7 @@ public class Arr {
                         System.out.print(separation + vett[i]);
         }
         
-        // FILL (modifies the actual array filling it)
+        
         /**
         * Fills the given {@code byte} array with the specified value.
         * <p>
@@ -1586,6 +1591,7 @@ public class Arr {
                                 vett[i] = "";
                 else
                         for(int i=0; i<vett.length; i++){
+                                if(vett[i] == null) vett[i] = "";
                                 char[] a = new char[stringLength];
                                 fillLetters(a);
                                 for(char c : a)
@@ -1616,6 +1622,7 @@ public class Arr {
                                 vett[i] = "";
                 else
                         for(int i=0; i<vett.length; i++){
+                                if(vett[i] == null) vett[i] = "";
                                 char[] a = new char[stringLength];
                                 fillLetters(a, upperCase);
                                 for(char c : a)
@@ -1644,6 +1651,7 @@ public class Arr {
                                 vett[i] = "";
                 else
                         for(int i=0; i<vett.length; i++){
+                                if(vett[i] == null) vett[i] = "";
                                 char[] a = new char[stringLength];
                                 fillNumbers(a);
                                 for(char c : a)
@@ -1672,6 +1680,7 @@ public class Arr {
                                 vett[i] = "";
                 else
                         for(int i=0; i<vett.length; i++){
+                                if(vett[i] == null) vett[i] = "";
                                 char[] a = new char[stringLength];
                                 fillAlphanumerical(a);
                                 for(char c : a)
@@ -1702,6 +1711,7 @@ public class Arr {
                                 vett[i] = "";
                 else
                         for(int i=0; i<vett.length; i++){
+                                if(vett[i] == null) vett[i] = "";
                                 char[] a = new char[stringLength];
                                 fillAlphanumerical(a, upperCase);
                                 for(char c : a)
@@ -1709,7 +1719,7 @@ public class Arr {
                         }
         }
         
-        // COPY (returns a copy of the array)
+        
         /**
         * Returns a new {@code byte} array containing a copy of the elements of the specified array.
         * <p>
@@ -2091,7 +2101,6 @@ public class Arr {
         }
         
         
-        // SORT (returns a sorted copy, useful if you need to have the original order and the sorted version)
         /**
         * Returns a sorted copy of the given {@code byte} array in ascending order.
         * <p>
@@ -2158,8 +2167,26 @@ public class Arr {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length < 2) return copyOf(vett);
                 int[] vetCopy = copyOf(vett);
-                quickSort(vetCopy, 0, vetCopy.length - 1);
+                if(vett.length < 47)
+                        insertionSort(vetCopy);
+                else
+                        quickSort(vetCopy, 0, vetCopy.length - 1);
                 return vetCopy;
+        }
+        private static void insertionSort(int[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        int key = arr[i];
+                        int j = i - 1;
+                        
+                        while (j >= 0 && arr[j] > key) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSort(int[] a, int left, int right) {
                 if (left >= right) return;
@@ -2231,8 +2258,26 @@ public class Arr {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length < 2) return copyOf(vett);
                 long[] vetCopy = copyOf(vett);
-                quickSort(vetCopy, 0, vetCopy.length - 1);
+                if(vett.length < 47)
+                        insertionSort(vetCopy);
+                else
+                        quickSort(vetCopy, 0, vetCopy.length - 1);
                 return vetCopy;
+        }
+        private static void insertionSort(long[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        long key = arr[i];
+                        int j = i - 1;
+
+                        while (j >= 0 && arr[j] > key) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSort(long[] a, int left, int right) {
                 if (left >= right) return;
@@ -2305,8 +2350,26 @@ public class Arr {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length < 2) return copyOf(vett);
                 float[] vetCopy = copyOf(vett);
-                quickSort(vetCopy, 0, vetCopy.length - 1);
+                if(vett.length < 47)
+                        insertionSort(vetCopy);
+                else
+                        quickSort(vetCopy, 0, vetCopy.length - 1);
                 return vetCopy;
+        }
+        private static void insertionSort(float[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        float key = arr[i];
+                        int j = i - 1;
+
+                        while (j >= 0 && arr[j] > key) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSort(float[] a, int left, int right) {
                 if (left >= right) return;
@@ -2379,8 +2442,26 @@ public class Arr {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length < 2) return copyOf(vett);
                 double[] vetCopy = copyOf(vett);
-                quickSort(vetCopy, 0, vetCopy.length - 1);
+                if(vett.length < 47)
+                        insertionSort(vetCopy);
+                else
+                        quickSort(vetCopy, 0, vetCopy.length - 1);
                 return vetCopy;
+        }
+        private static void insertionSort(double[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        double key = arr[i];
+                        int j = i - 1;
+
+                        while (j >= 0 && arr[j] > key) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSort(double[] a, int left, int right) {
             if (left >= right) return;
@@ -2508,8 +2589,28 @@ public class Arr {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if (vett.length < 2) return copyOf(vett);
                 String[] vetCopy = copyOf(vett);
-                quickSort(vetCopy, 0, vetCopy.length - 1);
+                for(int i=0; i<vetCopy.length; i++)
+                        if(vetCopy[i] == null) vetCopy[i] = "";
+                if(vett.length < 47)
+                        insertionSort(vetCopy);
+                else
+                        quickSort(vetCopy, 0, vetCopy.length - 1);
                 return vetCopy;
+        }
+        private static void insertionSort(String[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        String key = arr[i];
+                        int j = i - 1;
+
+                        while (j >= 0 && arr[j].compareTo(key) > 0) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSort(String[] a, int left, int right) {
                 if (left >= right)
@@ -2586,8 +2687,28 @@ public class Arr {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if (vett.length < 2) return copyOf(vett);
                 String[] vetCopy = copyOf(vett);
-                quickSortIgnoreCase(vetCopy, 0, vetCopy.length - 1);
+                for(int i=0; i<vetCopy.length; i++)
+                        if(vetCopy[i] == null) vetCopy[i] = "";
+                if(vett.length < 47)
+                        insertionSortIgnoreCase(vetCopy);
+                else
+                        quickSortIgnoreCase(vetCopy, 0, vetCopy.length - 1);
                 return vetCopy;
+        }
+        private static void insertionSortIgnoreCase(String[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        String key = arr[i];
+                        int j = i - 1;
+
+                        while (j >= 0 && arr[j].compareToIgnoreCase(key) > 0) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSortIgnoreCase(String[] a, int left, int right) {
                 if (left >= right)
@@ -2768,9 +2889,27 @@ public class Arr {
         public static long[] sortDesc(long[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length < 2) return copyOf(vett);
-                long[] copy = copyOf(vett);
-                quickSortDesc(copy, 0, copy.length - 1);
-                return copy;
+                long[] vetCopy = copyOf(vett);
+                if(vett.length < 47)
+                        insertionSortDesc(vetCopy);
+                else
+                        quickSortDesc(vetCopy, 0, vetCopy.length - 1);
+                return vetCopy;
+        }
+        private static void insertionSortDesc(long[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        long key = arr[i];
+                        int j = i - 1;
+
+                        while (j >= 0 && arr[j] < key) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSortDesc(long[] a, int left, int right) {
                 if (left >= right) return;
@@ -2830,8 +2969,26 @@ public class Arr {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length < 2) return copyOf(vett);
                 float[] vetCopy = copyOf(vett);
-                quickSortDesc(vetCopy, 0, vetCopy.length - 1);
+                if(vett.length < 47)
+                        insertionSortDesc(vetCopy);
+                else
+                        quickSortDesc(vetCopy, 0, vetCopy.length - 1);
                 return vetCopy;
+        }
+        private static void insertionSortDesc(float[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        float key = arr[i];
+                        int j = i - 1;
+
+                        while (j >= 0 && arr[j] < key) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSortDesc(float[] a, int left, int right) {
                 if (left >= right) return;
@@ -2891,8 +3048,26 @@ public class Arr {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length < 2) return copyOf(vett);
                 double[] vetCopy = copyOf(vett);
-                quickSortDesc(vetCopy, 0, vetCopy.length - 1);
+                if(vett.length < 47)
+                        insertionSortDesc(vetCopy);
+                else
+                        quickSortDesc(vetCopy, 0, vetCopy.length - 1);
                 return vetCopy;
+        }
+        private static void insertionSortDesc(double[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        double key = arr[i];
+                        int j = i - 1;
+
+                        while (j >= 0 && arr[j] < key) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSortDesc(double[] a, int left, int right) {
                 if (left >= right) return;
@@ -3004,8 +3179,28 @@ public class Arr {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if (vett.length < 2) return copyOf(vett);
                 String[] vetCopy = copyOf(vett);
-                quickSortDesc(vetCopy, 0, vetCopy.length - 1);
+                for(int i=0; i<vetCopy.length; i++)
+                        if(vetCopy[i] == null) vetCopy[i] = "";
+                if(vett.length < 47)
+                        insertionSortDesc(vetCopy);
+                else
+                        quickSortDesc(vetCopy, 0, vetCopy.length - 1);
                 return vetCopy;
+        }
+        private static void insertionSortDesc(String[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        String key = arr[i];
+                        int j = i - 1;
+
+                        while (j >= 0 && arr[j].compareTo(key) < 0) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSortDesc(String[] a, int left, int right) {
                 if (left >= right)
@@ -3082,8 +3277,28 @@ public class Arr {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if (vett.length < 2) return copyOf(vett);
                 String[] vetCopy = copyOf(vett);
-                quickSortDescIgnoreCase(vetCopy, 0, vetCopy.length - 1);
+                for(int i=0; i<vetCopy.length; i++)
+                        if(vetCopy[i] == null) vetCopy[i] = "";
+                if(vett.length < 47)
+                        insertionSortIgnoreCaseDesc(vetCopy);
+                else
+                        quickSortDescIgnoreCase(vetCopy, 0, vetCopy.length - 1);
                 return vetCopy;
+        }
+        private static void insertionSortIgnoreCaseDesc(String[] arr) {
+                int n = arr.length;
+
+                for (int i = 1; i < n; i++) {
+                        String key = arr[i];
+                        int j = i - 1;
+
+                        while (j >= 0 && arr[j].compareToIgnoreCase(key) < 0) {
+                                arr[j + 1] = arr[j];
+                                j--;
+                        }
+
+                        arr[j + 1] = key;
+                }
         }
         private static void quickSortDescIgnoreCase(String[] a, int left, int right) {
                 if (left >= right)
@@ -3141,7 +3356,7 @@ public class Arr {
                 quickSortDescIgnoreCase(a, g + 1, right);
         }
         
-        // FIND (returns an index, doesn't modify the array)
+        
         /**
         * Finds the index of a value in a {@code byte} array.
         * <p>
@@ -3840,9 +4055,11 @@ public class Arr {
                                 return ind;
                 }
                 
-                for(int i=0; i<vett.length; i++)
-                        if(vett[i].equals(value))
+                for(int i=0; i<vett.length; i++){
+                        if(vett[i] == null) {}
+                        else if(vett[i].equals(value))
                                 return i;
+                }
                 
                 return -1;
         }
@@ -3865,12 +4082,15 @@ public class Arr {
         if (vett == null) throw new NullPointerException("vett is null");
         if (value == null) throw new NullPointerException("value is null");
 
+        for(int i=0; i<vett.length; i++)
+                if(vett[i] == null) vett[i] = "";
+        
         int low = 0;
         int high = vett.length - 1;
 
         while (low <= high) {
             int mid = low + ((high - low) >>> 1);
-
+            
             int cmp = vett[mid].compareTo(value);
 
             if (cmp < 0)
@@ -3912,7 +4132,8 @@ public class Arr {
                 }
                 
                 for(int i=0; i<vett.length; i++)
-                        if(vett[i].equalsIgnoreCase(value))
+                        if(vett[i] == null) {}
+                        else if(vett[i].equalsIgnoreCase(value))
                                 return i;
                 
                 return -1;
@@ -3938,6 +4159,9 @@ public class Arr {
         if (vett == null) throw new NullPointerException("vett is null");
         if (value == null) throw new NullPointerException("value is null");
 
+        for(int i=0; i<vett.length; i++)
+                if(vett[i] == null) vett[i] = "";
+        
         int low = 0;
         int high = vett.length - 1;
 
@@ -3974,7 +4198,8 @@ public class Arr {
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
-                        if(vett[i].equals(value))
+                        if(vett[i] == null) {}
+                        else if(vett[i].equals(value))
                                 indexes.add(i);
                 
                 int[] result = new int[indexes.size()];
@@ -4001,7 +4226,8 @@ public class Arr {
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
-                        if(vett[i].equalsIgnoreCase(value))
+                        if(vett[i] == null) {}
+                        else if(vett[i].equalsIgnoreCase(value))
                                 indexes.add(i);
                 
                 int[] result = new int[indexes.size()];
@@ -4029,7 +4255,8 @@ public class Arr {
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
-                        if(vett[i].contains(value))
+                        if(vett[i] == null) {}
+                        else if(vett[i].contains(value))
                                 indexes.add(i);
                 
                 int[] result = new int[indexes.size()];
@@ -4058,7 +4285,8 @@ public class Arr {
                 ArrayList<Integer> indexes = new ArrayList();
                 
                 for(int i=0; i<vett.length; i++)
-                        if(vett[i].toLowerCase().contains(value.toLowerCase()))
+                        if(vett[i] == null) {}
+                        else if(vett[i].toLowerCase().contains(value.toLowerCase()))
                                 indexes.add(i);
                 
                 int[] result = new int[indexes.size()];
@@ -4067,7 +4295,7 @@ public class Arr {
                 return result;
         }
         
-        // REPLACE (modifies the array directly changing the values)
+        
         /**
         * Replaces all occurrences of a specific {@code byte} value in the given array with a new value.
         *
@@ -4210,7 +4438,8 @@ public class Arr {
                 if (newValue == null) throw new NullPointerException("newValue is null");
                 if(value.equals(newValue)) return;
                 for(int i=0; i<vett.length; i++)
-                        if(vett[i].equals(value))
+                        if(vett[i] == null) {}
+                        else if(vett[i].equals(value))
                                 vett[i] = newValue;
         }
         /**
@@ -4229,7 +4458,8 @@ public class Arr {
                 if (newValue == null) throw new NullPointerException("newValue is null");
                 if(value.equalsIgnoreCase(newValue)) return;
                 for(int i=0; i<vett.length; i++)
-                        if(vett[i].equalsIgnoreCase(value))
+                        if(vett[i] == null) {}
+                        else if(vett[i].equalsIgnoreCase(value))
                                 vett[i] = newValue;
         }
         
@@ -4451,7 +4681,7 @@ public class Arr {
                 }
         }
         
-        // SHUFFLE (returns a copy, useful to keep the original order and the shuffled one)
+        
         /**
         * Returns a shuffled copy of the specified {@code byte} array.
         * <p>
@@ -4895,7 +5125,7 @@ public class Arr {
                 return vetCopy;
         }
 
-        // PICK (returns a value, doesn't modify the array)
+        
         /**
         * Returns a randomly selected element from the specified {@code byte} array.
         *
@@ -5005,7 +5235,7 @@ public class Arr {
                 return vett[randomIndex(vett.length)];
         }
         
-        // FLIP (returns a copy, can be useful especially if used as a method argument)
+        
         /**
         * Returns a reversed copy of the specified {@code byte} array.
         * <p>
@@ -5160,7 +5390,7 @@ public class Arr {
                 return vetCopy;
         }
         
-        // SHIFT
+        
         /**
         * Returns a new {@code byte} array with all elements shifted one position to the right.
         * <p>
@@ -5521,5 +5751,292 @@ public class Arr {
                         vetCopy[i] = vetCopy[i+1];
                 vetCopy[vetCopy.length-1] = tmp;
                 return vetCopy;
+        }
+        
+        public static byte min(byte[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[0];
+        }
+        public static short min(short[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[0];
+        }
+        public static int min(int[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[0];
+        }
+        public static long min(long[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[0];
+        }
+        public static float min(float[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[0];
+        }
+        public static double min(double[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[0];
+        }
+        public static char min(char[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[0];
+        }
+        public static boolean min(boolean[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[0];
+        }
+        public static String min(String[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[0];
+        }
+        public static String minIgnoreCase(String[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortIgnoreCase(vett)[0];
+        }
+        
+        public static byte max(byte[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortDesc(vett)[0];
+        }
+        public static short max(short[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortDesc(vett)[0];
+        }
+        public static int max(int[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortDesc(vett)[0];
+        }
+        public static long max(long[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortDesc(vett)[0];
+        }
+        public static float max(float[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortDesc(vett)[0];
+        }
+        public static double max(double[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortDesc(vett)[0];
+        }
+        public static char max(char[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortDesc(vett)[0];
+        }
+        public static boolean max(boolean[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortDesc(vett)[0];
+        }
+        public static String max(String[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortDesc(vett)[0];
+        }
+        public static String maxIgnoreCase(String[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortDescIgnoreCase(vett)[0];
+        }
+        
+        public static byte median(byte[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[vett.length / 2];
+        }
+        public static short median(short[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[vett.length / 2];
+        }
+        public static int median(int[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[vett.length / 2];
+        }
+        public static long median(long[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[vett.length / 2];
+        }
+        public static float median(float[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[vett.length / 2];
+        }
+        public static double median(double[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[vett.length / 2];
+        }
+        public static char median(char[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[vett.length / 2];
+        }
+        public static boolean median(boolean[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[vett.length / 2];
+        }
+        public static String median(String[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sort(vett)[vett.length / 2];
+        }
+        
+        public static byte average(byte[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                int tot = 0;
+                for(byte n : vett)
+                        tot+=n;
+                return (byte)((double) tot / vett.length);
+        }
+        public static double averageRD(byte[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                int tot = 0;
+                for(byte n : vett)
+                        tot+=n;
+                return (double) tot / vett.length;
+        }
+        public static short average(short[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                int tot = 0;
+                for (short n : vett)
+                        tot += n;
+                return (short) ((double) tot / vett.length);
+        }
+        public static double averageRD(short[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                int tot = 0;
+                for (short n : vett)
+                        tot += n;
+                return (double) tot / vett.length;
+        }
+        public static int average(int[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                long tot = 0;
+                for (int n : vett)
+                        tot += n;
+                return (int) ((double) tot / vett.length);
+        }
+        public static double averageRD(int[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                long tot = 0;
+                for (int n : vett)
+                        tot += n;
+                return (double) tot / vett.length;
+        }
+        public static long average(long[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                double tot = 0;
+                for (long n : vett)
+                        tot += n;
+                return (long) (tot / vett.length);
+        }
+        public static double averageRD(long[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                double tot = 0;
+                for (long n : vett)
+                        tot += n;
+                return tot / vett.length;
+        }
+        public static float average(float[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                double tot = 0;
+                for (float n : vett)
+                        tot += n;
+                return (float) (tot / vett.length);
+        }
+        public static double averageRD(float[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                double tot = 0;
+                for (float n : vett)
+                        tot += n;
+                return tot / vett.length;
+        }
+        public static double average(double[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                double tot = 0;
+                for (double n : vett)
+                        tot += n;
+                return tot / vett.length;
+        }
+        public static double averageRD(double[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                return average(vett);
+        }
+        public static char average(char[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                long tot = 0;
+                for (char n : vett)
+                        tot += n;
+                return (char) (tot / vett.length);
+        }
+        public static double averageRD(char[] vett) {
+                if (vett == null) throw new NullPointerException("vett is null");
+                long tot = 0;
+                for (char n : vett)
+                        tot += n;
+                return (double) tot / vett.length;
+        }
+        
+        public static byte tot(byte[] vett){
+                byte tot = 0;
+                for(byte n : vett)
+                        tot += n;
+                return tot;
+        }
+        public static short tot(short[] vett){
+                short tot = 0;
+                for(short n : vett)
+                        tot += n;
+                return tot;
+        }
+        public static int tot(int[] vett){
+                int tot = 0;
+                for(int n : vett) 
+                        tot += n;
+                return tot;
+        }
+        public static long tot(long[] vett){
+                long tot = 0;
+                for(long n : vett)
+                        tot += n;
+                return tot;
+        }
+        public static float tot(float[] vett){
+                float tot = 0;
+                for(float n : vett)
+                        tot += n;
+                return tot;
+        }
+        public static double tot(double[] vett){
+                double tot = 0;
+                for(double n : vett)
+                        tot += n;
+                return tot;
+        }
+        public static String tot(String[] vett){
+                String tot = "";
+                for(String s : vett)
+                        tot = tot.concat(s);
+                return tot;
         }
 }
