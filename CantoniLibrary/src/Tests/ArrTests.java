@@ -57,7 +57,7 @@ public class ArrTests {
                 System.out.println();
                 System.out.print("Long (Width: 10, Separation: \" / \"): "); Arr.print(lArr,10," / ");
                 System.out.println();
-                System.out.print("Float (Decimals: 3, Width: 5, Separation: \",\\n\"): "); Arr.print(fArr,3,5,",\n");
+                System.out.print("Float (Decimals: 3, Width: 5, Separation: \",\\n\"): "); Arr.print(fArr,0,5,",\n");
                 System.out.println();
                 System.out.print("Double (Decimals: 9, Separation: \"__\\n\"): "); Arr.print(dArr,9,"__\n");
                 System.out.println();

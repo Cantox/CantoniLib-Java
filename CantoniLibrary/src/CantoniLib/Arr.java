@@ -119,7 +119,6 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (width < 0) width = 0;
                 
                 String s = Byte.toString(vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + s);
@@ -157,7 +156,6 @@ public class Arr {
                         return;
                 }
                 if (separation == null) separation = ", ";
-                if (width < 0) width = 0;
                 
                 String s = Byte.toString(vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + s);
@@ -243,7 +241,6 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (width < 0) width = 0;
                 
                 String s = Short.toString(vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + s);
@@ -281,7 +278,6 @@ public class Arr {
                         return;
                 }
                 if (separation == null) separation = ", ";
-                if (width < 0) width = 0;
                 
                 String s = Short.toString(vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + s);
@@ -367,7 +363,6 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (width < 0) width = 0;
                 
                 String s = Integer.toString(vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + s);
@@ -405,7 +400,6 @@ public class Arr {
                         return;
                 }
                 if (separation == null) separation = ", ";
-                if (width < 0) width = 0;
                 
                 String s = Integer.toString(vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + s);
@@ -491,7 +485,6 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (width < 0) width = 0;
                 
                 String s = Long.toString(vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + s);
@@ -529,7 +522,6 @@ public class Arr {
                         return;
                 }
                 if (separation == null) separation = ", ";
-                if (width < 0) width = 0;
                 
                 String s = Long.toString(vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + s);
@@ -614,7 +606,7 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (decimals < 0) decimals = 1;
+                if (decimals < 1) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
                 DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
@@ -649,7 +641,7 @@ public class Arr {
                         return;
                 }
                 if (separation == null) separation = ", ";
-                if (decimals < 0) decimals = 1;
+                if (decimals < 1) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
                 DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
@@ -683,8 +675,7 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (decimals < 0) decimals = 1;
-                if(width < 1) width = 0;
+                if (decimals < 1) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
                 DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
@@ -726,8 +717,7 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (decimals < 0) decimals = 1;
-                if(width < 1) width = 0;
+                if (decimals < 1) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
                 DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
@@ -814,7 +804,7 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (decimals < 0) decimals = 1;
+                if (decimals < 1) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
                 DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
@@ -849,7 +839,7 @@ public class Arr {
                         return;
                 }
                 if (separation == null) separation = ", ";
-                if (decimals < 0) decimals = 1;
+                if (decimals < 1) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
                 DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
@@ -883,8 +873,7 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (decimals < 0) decimals = 1;
-                if(width < 1) width = 0;
+                if (decimals < 1) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
                 DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
@@ -926,8 +915,7 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (decimals < 0) decimals = 1;
-                if(width < 1) width = 0;
+                if (decimals < 1) decimals = 1;
                 
                 String pattern = "0." + "0".repeat(decimals);
                 DecimalFormat df = new DecimalFormat(pattern,usDecimalFormatSymbols);
@@ -1015,7 +1003,6 @@ public class Arr {
                         System.out.print("[]");
                         return;
                 }
-                if (width < 0) width = 0;
                 
                 String s = String.valueOf(vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + s);
@@ -1053,7 +1040,6 @@ public class Arr {
                         return;
                 }
                 if (separation == null) separation = ", ";
-                if (width < 0) width = 0;
                 
                 String s = String.valueOf(vett[0]);
                 System.out.print(" ".repeat(Math.max(0, width - s.length())) + s);
