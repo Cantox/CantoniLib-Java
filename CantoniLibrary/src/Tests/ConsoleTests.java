@@ -23,6 +23,7 @@ public class ConsoleTests {
                 System.out.println("Char read: " + c);
                 boolean bool = Console.readBoolean("Boolean: ");
                 System.out.println("Boolean read: " + bool);
+                System.out.println();
         }
         
         public static void format(){
@@ -35,48 +36,54 @@ public class ConsoleTests {
                 System.out.println("Double (Width: 3, Decimals 3): " + Console.format(3.4, 3, 3));
                 System.out.println("Char (Width: 2): " + Console.format('A', 2));
                 System.out.println("Boolean (Width: 5): " + Console.format(true, 3));
+                System.out.println();
         }
         
         public static void colors(){
-                System.out.println(Console.BLACK + "Black");
-                System.out.println(Console.RED + "Red");
-                System.out.println(Console.GREEN + "Green");
-                System.out.println(Console.YELLOW + "Yellow");
-                System.out.println(Console.BLUE + "Blue");
-                System.out.println(Console.PURPLE + "Purple");
-                System.out.println(Console.CYAN + "Cyan");
-                System.out.println(Console.WHITE + "White");
+                System.out.println("--- CONSOLE COLORING / STYLING ---");
+                System.out.println(Console.BLACK + "Black" + Console.RESET);
+                System.out.println(Console.RED + "Red" + Console.RESET);
+                System.out.println(Console.GREEN + "Green" + Console.RESET);
+                System.out.println(Console.YELLOW + "Yellow" + Console.RESET);
+                System.out.println(Console.BLUE + "Blue" + Console.RESET);
+                System.out.println(Console.PURPLE + "Purple" + Console.RESET);
+                System.out.println(Console.CYAN + "Cyan" + Console.RESET);
+                System.out.println(Console.WHITE + "White" + Console.RESET);
                 
-                System.out.println(Console.LIGHT_BLACK + "Light black");
-                System.out.println(Console.LIGHT_RED + "Light red");
-                System.out.println(Console.LIGHT_GREEN + "Light green");
-                System.out.println(Console.LIGHT_YELLOW + "Light yellow");
-                System.out.println(Console.LIGHT_BLUE + "Light blue");
-                System.out.println(Console.LIGHT_PURPLE + "Light purple");
-                System.out.println(Console.LIGHT_CYAN + "Light cyan");
-                System.out.println(Console.LIGHT_WHITE + "Light white");
+                System.out.println();
                 
-                System.out.print(Console.RESET);
+                System.out.println(Console.LIGHT_BLACK + "Light black" + Console.RESET);
+                System.out.println(Console.LIGHT_RED + "Light red" + Console.RESET);
+                System.out.println(Console.LIGHT_GREEN + "Light green" + Console.RESET);
+                System.out.println(Console.LIGHT_YELLOW + "Light yellow" + Console.RESET);
+                System.out.println(Console.LIGHT_BLUE + "Light blue" + Console.RESET);
+                System.out.println(Console.LIGHT_PURPLE + "Light purple" + Console.RESET);
+                System.out.println(Console.LIGHT_CYAN + "Light cyan" + Console.RESET);
+                System.out.println(Console.LIGHT_WHITE + "Light white" + Console.RESET);
                 
-                System.out.println(Console.BG_BLACK + "Background black");
-                System.out.println(Console.BG_RED + "Background red");
-                System.out.println(Console.BG_GREEN + "Background green");
-                System.out.println(Console.BG_YELLOW + "Background yellow");
-                System.out.println(Console.BG_BLUE + "Background blue");
-                System.out.println(Console.BG_PURPLE + "Background purple");
-                System.out.println(Console.BG_CYAN + "Background cyan");
-                System.out.println(Console.BG_WHITE + "Background white");
+                System.out.println();
                 
-                System.out.println(Console.BG_LIGHT_BLACK + "Background light black");
-                System.out.println(Console.BG_LIGHT_RED + "Background light red");
-                System.out.println(Console.BG_LIGHT_GREEN + "Background light green");
-                System.out.println(Console.BG_LIGHT_YELLOW + "Background light yellow");
-                System.out.println(Console.BG_LIGHT_BLUE + "Background light blue");
-                System.out.println(Console.BG_LIGHT_PURPLE + "Background light purple");
-                System.out.println(Console.BG_LIGHT_CYAN + "Background light cyan");
-                System.out.println(Console.BG_LIGHT_WHITE + "Background light white");
+                System.out.println(Console.BG_BLACK + "Background black" + Console.RESET);
+                System.out.println(Console.BG_RED + "Background red" + Console.RESET);
+                System.out.println(Console.BG_GREEN + "Background green" + Console.RESET);
+                System.out.println(Console.BG_YELLOW + "Background yellow" + Console.RESET);
+                System.out.println(Console.BG_BLUE + "Background blue" + Console.RESET);
+                System.out.println(Console.BG_PURPLE + "Background purple" + Console.RESET);
+                System.out.println(Console.BG_CYAN + "Background cyan" + Console.RESET);
+                System.out.println(Console.BG_WHITE + "Background white" + Console.RESET);
                 
-                System.out.print(Console.RESET);
+                System.out.println();
+                
+                System.out.println(Console.BG_LIGHT_BLACK + "Background light black" + Console.RESET);
+                System.out.println(Console.BG_LIGHT_RED + "Background light red" + Console.RESET);
+                System.out.println(Console.BG_LIGHT_GREEN + "Background light green" + Console.RESET);
+                System.out.println(Console.BG_LIGHT_YELLOW + "Background light yellow" + Console.RESET);
+                System.out.println(Console.BG_LIGHT_BLUE + "Background light blue" + Console.RESET);
+                System.out.println(Console.BG_LIGHT_PURPLE + "Background light purple" + Console.RESET);
+                System.out.println(Console.BG_LIGHT_CYAN + "Background light cyan" + Console.RESET);
+                System.out.println(Console.BG_LIGHT_WHITE + "Background light white" + Console.RESET);
+                
+                System.out.println();
                 
                 System.out.println(Console.BOLD + "Bold" + Console.RESET);
                 System.out.println(Console.DIM + "Dim" + Console.RESET);
@@ -87,6 +94,7 @@ public class ConsoleTests {
                 System.out.println(Console.REVERSE + "Reverse" + Console.RESET);
                 System.out.println(Console.HIDDEN + "Hidden" + Console.RESET);
                 System.out.println(Console.STRIKETHROUGH + "Strikethrough" + Console.RESET);
+                System.out.println();
         }
         
         public static void clear(){

@@ -4,8 +4,8 @@ import Tests.*;
 
 public class Main {
         public static void main(String[] args) {
-//                rand();
-//                arr();
+                rand();
+                arr();
                 console();
         }
         
