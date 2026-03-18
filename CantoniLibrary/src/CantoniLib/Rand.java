@@ -5,6 +5,8 @@ import java.util.Random;
 public final class Rand {
         private static final Random r = new Random();
         
+        private Rand() {}
+        
         public static byte newByte(byte min, byte max){
                 if(min > max)
                         throw new IllegalArgumentException("min > max");

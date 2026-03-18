@@ -7,6 +7,9 @@ import java.util.Locale;
 
 public class Console {
         private static final DecimalFormatSymbols decimalSymbols = DecimalFormatSymbols.getInstance(Locale.US);
+        
+        private Console() {}
+        
         private static void printMsg(String msg){
                 System.out.print(msg);
                 System.out.flush();

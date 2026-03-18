@@ -14,6 +14,8 @@ public class Arr {
         private static final Random r = new Random();
         private static final DecimalFormatSymbols usDecimalFormatSymbols = DecimalFormatSymbols.getInstance(Locale.US);
         
+        private Arr() {}
+        
         private static int randomIndex(int vettLength){
                 if(vettLength < 1) vettLength = 1;
                 int min = 0, max = vettLength-1;
@@ -1090,6 +1092,7 @@ public class Arr {
         public static byte[] sort(byte[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length < 2) return copyOf(vett);
+                
                 byte[] vetCopy = copyOf(vett);
                 int[] count = new int[256];
 
@@ -1720,7 +1723,6 @@ public class Arr {
         *        new Person("Bob", 25),
         *        new Person("Charlie", 35)
         *};
-        *
         *       
          * @param <T>
          * @param vett The array to sort
@@ -3715,278 +3717,471 @@ public class Arr {
         }
         
         
-        public static byte min(byte[] vett){
+        public static byte getMin(byte[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[0];
+                if(vett.length == 1) return vett[0];
+                byte[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] < vettCopy[i+1]){
+                            byte temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static short min(short[] vett){
+        public static short getMin(short[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[0];
+                if(vett.length == 1) return vett[0];
+                short[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] < vettCopy[i+1]){
+                            short temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static int min(int[] vett){
+        public static int getMin(int[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[0];
+                if(vett.length == 1) return vett[0];
+                int[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] < vettCopy[i+1]){
+                            int temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static long min(long[] vett){
+        public static long getMin(long[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[0];
+                if(vett.length == 1) return vett[0];
+                long[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] < vettCopy[i+1]){
+                            long temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static float min(float[] vett){
+        public static float getMin(float[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[0];
+                if(vett.length == 1) return vett[0];
+                float[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] < vettCopy[i+1]){
+                            float temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static double min(double[] vett){
+        public static double getMin(double[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[0];
+                if(vett.length == 1) return vett[0];
+                double[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] < vettCopy[i+1]){
+                            double temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static char min(char[] vett){
+        public static char getMin(char[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[0];
+                if(vett.length == 1) return vett[0];
+                char[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] < vettCopy[i+1]){
+                            char temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static boolean min(boolean[] vett){
+        public static String getMin(String[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[0];
+                if(vett.length == 1) return vett[0];
+                String[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i].compareTo(vettCopy[i+1]) < 0){
+                            String temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static String min(String[] vett){
+        public static String getMinIgnoreCase(String[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[0];
+                if(vett.length == 1) return vett[0];
+                String[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i].compareToIgnoreCase(vettCopy[i+1]) < 0){
+                            String temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static String minIgnoreCase(String[] vett){
+        public static <T extends Comparable<T>> T getMin(T[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortIgnoreCase(vett)[0];
+                if(vett.length == 1) return vett[0];
+                T[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i].compareTo(vettCopy[i+1]) < 0){
+                            T temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static <T extends Comparable<T>> T min(T[] vett){
-                if (vett == null) throw new NullPointerException("vett is null");
-                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[0];
-        }
-        public static <T> T min(T[] vett, Comparator<T> comparator) {
+        public static <T> T getMin(T[] vett, Comparator<T> comparator) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if (comparator == null) throw new NullPointerException("comparator is null");
                 if (vett.length == 0) throw new IllegalArgumentException("vett is empty");
-
-                return sort(vett,comparator)[0];
+                
+                if(vett.length == 1) return vett[0];
+                T[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(comparator.compare(vettCopy[i],vettCopy[i+1]) < 0){
+                            T temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
         
-        public static byte max(byte[] vett){
+        public static byte getMax(byte[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortDesc(vett)[0];
+                if(vett.length == 1) return vett[0];
+                byte[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] > vettCopy[i+1]){
+                            byte temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static short max(short[] vett){
+        public static short getMax(short[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortDesc(vett)[0];
+                if(vett.length == 1) return vett[0];
+                short[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] > vettCopy[i+1]){
+                            short temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static int max(int[] vett){
+        public static int getMax(int[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortDesc(vett)[0];
+                if(vett.length == 1) return vett[0];
+                int[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] > vettCopy[i+1]){
+                            int temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static long max(long[] vett){
+        public static long getMax(long[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortDesc(vett)[0];
+                if(vett.length == 1) return vett[0];
+                long[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] > vettCopy[i+1]){
+                            long temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static float max(float[] vett){
+        public static float getMax(float[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortDesc(vett)[0];
+                if(vett.length == 1) return vett[0];
+                float[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] > vettCopy[i+1]){
+                            float temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static double max(double[] vett){
+        public static double getMax(double[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortDesc(vett)[0];
+                if(vett.length == 1) return vett[0];
+                double[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] > vettCopy[i+1]){
+                            double temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static char max(char[] vett){
+        public static char getMax(char[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortDesc(vett)[0];
+                if(vett.length == 1) return vett[0];
+                char[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i] > vettCopy[i+1]){
+                            char temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static boolean max(boolean[] vett){
+        public static String getMax(String[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortDesc(vett)[0];
+                if(vett.length == 1) return vett[0];
+                String[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i].compareTo(vettCopy[i+1]) > 0){
+                            String temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static String max(String[] vett){
+        public static String getMaxIgnoreCase(String[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortDesc(vett)[0];
+                if(vett.length == 1) return vett[0];
+                String[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i].compareToIgnoreCase(vettCopy[i+1]) > 0){
+                            String temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static String maxIgnoreCase(String[] vett){
+        public static <T extends Comparable<T>> T getMax(T[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sortDescIgnoreCase(vett)[0];
+                if(vett.length == 1) return vett[0];
+                T[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(vettCopy[i].compareTo(vettCopy[i+1]) > 0){
+                            T temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
-        public static <T extends Comparable<T>> T max(T[] vett){
-                if (vett == null) throw new NullPointerException("vett is null");
-                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
-                return sort(vett)[vett.length-1];
-        }
-        public static <T> T max(T[] vett, Comparator<T> comparator) {
+        public static <T> T getMax(T[] vett, Comparator<T> comparator) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 if (comparator == null) throw new NullPointerException("comparator is null");
                 if (vett.length == 0) throw new IllegalArgumentException("vett is empty");
-
-                return sort(vett,comparator)[vett.length-1];
+                
+                if(vett.length == 1) return vett[0];
+                T[] vettCopy = copyOf(vett);
+                
+                for(int i=0; i<vettCopy.length-1; i++)
+                      if(comparator.compare(vettCopy[i],vettCopy[i+1]) > 0){
+                            T temp = vettCopy[i];
+                            vettCopy[i] = vettCopy[i+1];
+                            vettCopy[i+1] = temp;
+                      }
+                return vettCopy[vettCopy.length-1];
         }
         
         
-        public static byte median(byte[] vett){
+        public static byte getMedian(byte[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett)[vett.length / 2];
         }
-        public static short median(short[] vett){
+        public static short getMedian(short[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett)[vett.length / 2];
         }
-        public static int median(int[] vett){
+        public static int getMedian(int[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett)[vett.length / 2];
         }
-        public static long median(long[] vett){
+        public static long getMedian(long[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett)[vett.length / 2];
         }
-        public static float median(float[] vett){
+        public static float getMedian(float[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett)[vett.length / 2];
         }
-        public static double median(double[] vett){
+        public static double getMedian(double[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett)[vett.length / 2];
         }
-        public static char median(char[] vett){
+        public static char getMedian(char[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett)[vett.length / 2];
         }
-        public static boolean median(boolean[] vett){
+        public static boolean getMedian(boolean[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett)[vett.length / 2];
         }
-        public static String median(String[] vett){
+        public static String getMedian(String[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett)[vett.length / 2];
         }
-        public static <T extends Comparable<T>> T median(T[] vett){
+        public static String getMedianIgnoreCase(String[] vett){
+                if (vett == null) throw new NullPointerException("vett is null");
+                if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
+                return sortIgnoreCase(vett)[vett.length / 2];
+        }
+        public static <T extends Comparable<T>> T getMedian(T[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett)[vett.length / 2];
         }
-        public static <T> T median(T[] vett, Comparator<T> comparator){
+        public static <T> T getMedian(T[] vett, Comparator<T> comparator){
                 if (vett == null) throw new NullPointerException("vett is null");
                 if(vett.length == 0) throw new IllegalArgumentException("vett is empty");
                 return sort(vett,comparator)[vett.length / 2];
         }
         
-        public static byte average(byte[] vett){
+        public static byte getAvarage(byte[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 int tot = 0;
                 for(byte n : vett)
                         tot+=n;
                 return (byte)((double) tot / vett.length);
         }
-        public static double averageRD(byte[] vett){
+        public static double getAvarageDouble(byte[] vett){
                 if (vett == null) throw new NullPointerException("vett is null");
                 int tot = 0;
                 for(byte n : vett)
                         tot+=n;
                 return (double) tot / vett.length;
         }
-        public static short average(short[] vett) {
+        public static short getAvarage(short[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 int tot = 0;
                 for (short n : vett)
                         tot += n;
                 return (short) ((double) tot / vett.length);
         }
-        public static double averageRD(short[] vett) {
+        public static double getAvarageDouble(short[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 int tot = 0;
                 for (short n : vett)
                         tot += n;
                 return (double) tot / vett.length;
         }
-        public static int average(int[] vett) {
+        public static int getAvarage(int[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 long tot = 0;
                 for (int n : vett)
                         tot += n;
                 return (int) ((double) tot / vett.length);
         }
-        public static double averageRD(int[] vett) {
+        public static double getAvarageDouble(int[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 long tot = 0;
                 for (int n : vett)
                         tot += n;
                 return (double) tot / vett.length;
         }
-        public static long average(long[] vett) {
+        public static long getAvarage(long[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 double tot = 0;
                 for (long n : vett)
                         tot += n;
                 return (long) (tot / vett.length);
         }
-        public static double averageRD(long[] vett) {
+        public static double getAvarageDouble(long[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 double tot = 0;
                 for (long n : vett)
                         tot += n;
                 return tot / vett.length;
         }
-        public static float average(float[] vett) {
+        public static float getAvarage(float[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 double tot = 0;
                 for (float n : vett)
                         tot += n;
                 return (float) (tot / vett.length);
         }
-        public static double averageRD(float[] vett) {
+        public static double getAvarageDouble(float[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 double tot = 0;
                 for (float n : vett)
                         tot += n;
                 return tot / vett.length;
         }
-        public static double average(double[] vett) {
+        public static double getAvarage(double[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 double tot = 0;
                 for (double n : vett)
                         tot += n;
                 return tot / vett.length;
         }
-        public static double averageRD(double[] vett) {
+        public static double getAvarageDouble(double[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
-                return average(vett);
+                return Arr.getAvarage(vett);
         }
-        public static char average(char[] vett) {
+        public static char getAvarage(char[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 long tot = 0;
                 for (char n : vett)
                         tot += n;
                 return (char) (tot / vett.length);
         }
-        public static double averageRD(char[] vett) {
+        public static double getAvarageDouble(char[] vett) {
                 if (vett == null) throw new NullPointerException("vett is null");
                 long tot = 0;
                 for (char n : vett)
@@ -3994,49 +4189,49 @@ public class Arr {
                 return (double) tot / vett.length;
         }
         
-        public static byte tot(byte[] vett){
+        public static byte getTot(byte[] vett){
                 byte tot = 0;
                 for(byte n : vett)
                         tot += n;
                 return tot;
         }
-        public static short tot(short[] vett){
+        public static short getTot(short[] vett){
                 short tot = 0;
                 for(short n : vett)
                         tot += n;
                 return tot;
         }
-        public static int tot(int[] vett){
+        public static int getTot(int[] vett){
                 int tot = 0;
                 for(int n : vett) 
                         tot += n;
                 return tot;
         }
-        public static long tot(long[] vett){
+        public static long getTot(long[] vett){
                 long tot = 0;
                 for(long n : vett)
                         tot += n;
                 return tot;
         }
-        public static float tot(float[] vett){
+        public static float getTot(float[] vett){
                 float tot = 0;
                 for(float n : vett)
                         tot += n;
                 return tot;
         }
-        public static double tot(double[] vett){
+        public static double getTot(double[] vett){
                 double tot = 0;
                 for(double n : vett)
                         tot += n;
                 return tot;
         }
-        public static String tot(char[] vett){
+        public static String getTot(char[] vett){
                 String s = "";
                 for(char c : vett)
                         s = s.concat(String.valueOf(c));
                 return s;
         }
-        public static String tot(String[] vett){
+        public static String getTot(String[] vett){
                 String tot = "";
                 for(String s : vett)
                         tot = tot.concat(s);

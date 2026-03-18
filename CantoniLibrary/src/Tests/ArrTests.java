@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package Tests;
 
 import CantoniLib.Arr;
@@ -738,99 +734,101 @@ public class ArrTests {
         
         public static void min_max(){
                 System.out.println("--- FIND MIN ---");
-                System.out.print("Byte: "); Arr.print(bArr); System.out.print(" --> " + Arr.min(bArr));
+                System.out.print("Byte: "); Arr.print(bArr); System.out.print(" --> " + Arr.getMin(bArr));
                 System.out.println();
-                System.out.print("Short: "); Arr.print(sArr); System.out.print(" --> " + Arr.min(sArr));
+                System.out.print("Short: "); Arr.print(sArr); System.out.print(" --> " + Arr.getMin(sArr));
                 System.out.println();
-                System.out.print("Int: "); Arr.print(iArr); System.out.print(" --> " + Arr.min(iArr));
+                System.out.print("Int: "); Arr.print(iArr); System.out.print(" --> " + Arr.getMin(iArr));
                 System.out.println();
-                System.out.print("Long: "); Arr.print(lArr); System.out.print(" --> " + Arr.min(lArr));
+                System.out.print("Long: "); Arr.print(lArr); System.out.print(" --> " + Arr.getMin(lArr));
                 System.out.println();
-                System.out.print("Float: "); Arr.print(fArr,2); System.out.print(" --> " + Arr.min(fArr));
+                System.out.print("Float: "); Arr.print(fArr,2); System.out.print(" --> " + Arr.getMin(fArr));
                 System.out.println();
-                System.out.print("Double: "); Arr.print(dArr,3); System.out.print(" --> " + Arr.min(dArr));
+                System.out.print("Double: "); Arr.print(dArr,3); System.out.print(" --> " + Arr.getMin(dArr));
                 System.out.println();
-                System.out.print("Char: "); Arr.print(cArr); System.out.print(" --> " + Arr.min(cArr));
+                System.out.print("Char: "); Arr.print(cArr); System.out.print(" --> " + Arr.getMin(cArr));
                 System.out.println();
-                System.out.print("Boolean: "); Arr.print(boolArr); System.out.print(" --> " + Arr.min(boolArr));
+                System.out.print("String: "); Arr.print(stringArr); System.out.print(" --> " + Arr.getMin(stringArr));
                 System.out.println();
-                System.out.print("String: "); Arr.print(stringArr); System.out.print(" --> " + Arr.min(stringArr));
+                System.out.print("String (Ingore case): "); Arr.print(stringArr); System.out.print(" --> " + Arr.getMinIgnoreCase(stringArr));
                 System.out.println("\n");
                 
                 System.out.println("--- FIND MAX ---");
-                System.out.print("Byte: "); Arr.print(bArr); System.out.print(" --> " + Arr.max(bArr));
+                System.out.print("Byte: "); Arr.print(bArr); System.out.print(" --> " + Arr.getMax(bArr));
                 System.out.println();
-                System.out.print("Short: "); Arr.print(sArr); System.out.print(" --> " + Arr.max(sArr));
+                System.out.print("Short: "); Arr.print(sArr); System.out.print(" --> " + Arr.getMax(sArr));
                 System.out.println();
-                System.out.print("Int: "); Arr.print(iArr); System.out.print(" --> " + Arr.max(iArr));
+                System.out.print("Int: "); Arr.print(iArr); System.out.print(" --> " + Arr.getMax(iArr));
                 System.out.println();
-                System.out.print("Long: "); Arr.print(lArr); System.out.print(" --> " + Arr.max(lArr));
+                System.out.print("Long: "); Arr.print(lArr); System.out.print(" --> " + Arr.getMax(lArr));
                 System.out.println();
-                System.out.print("Float: "); Arr.print(fArr,2); System.out.print(" --> " + Arr.max(fArr));
+                System.out.print("Float: "); Arr.print(fArr,2); System.out.print(" --> " + Arr.getMax(fArr));
                 System.out.println();
-                System.out.print("Double: "); Arr.print(dArr,3); System.out.print(" --> " + Arr.max(dArr));
+                System.out.print("Double: "); Arr.print(dArr,3); System.out.print(" --> " + Arr.getMax(dArr));
                 System.out.println();
-                System.out.print("Char: "); Arr.print(cArr); System.out.print(" --> " + Arr.max(cArr));
+                System.out.print("Char: "); Arr.print(cArr); System.out.print(" --> " + Arr.getMax(cArr));
                 System.out.println();
-                System.out.print("Boolean: "); Arr.print(boolArr); System.out.print(" --> " + Arr.max(boolArr));
+                System.out.print("String: "); Arr.print(stringArr); System.out.print(" --> " + Arr.getMax(stringArr));
                 System.out.println();
-                System.out.print("String: "); Arr.print(stringArr); System.out.print(" --> " + Arr.max(stringArr));
+                System.out.print("String (Ignore case): "); Arr.print(stringArr); System.out.print(" --> " + Arr.getMaxIgnoreCase(stringArr));
                 System.out.println("\n");
         }
         
         public static void median_avarage(){
                 System.out.println("--- FIND MEDIAN ---");
-                System.out.print("Byte: "); Arr.print(bArr); System.out.print(" --> " + Arr.median(bArr));
+                System.out.print("Byte: "); Arr.print(bArr); System.out.print(" --> " + Arr.getMedian(bArr));
                 System.out.println();
-                System.out.print("Short: "); Arr.print(sArr); System.out.print(" --> " + Arr.median(sArr));
+                System.out.print("Short: "); Arr.print(sArr); System.out.print(" --> " + Arr.getMedian(sArr));
                 System.out.println();
-                System.out.print("Int: "); Arr.print(iArr); System.out.print(" --> " + Arr.median(iArr));
+                System.out.print("Int: "); Arr.print(iArr); System.out.print(" --> " + Arr.getMedian(iArr));
                 System.out.println();
-                System.out.print("Long: "); Arr.print(lArr); System.out.print(" --> " + Arr.median(lArr));
+                System.out.print("Long: "); Arr.print(lArr); System.out.print(" --> " + Arr.getMedian(lArr));
                 System.out.println();
-                System.out.print("Float: "); Arr.print(fArr,2); System.out.print(" --> " + Arr.median(fArr));
+                System.out.print("Float: "); Arr.print(fArr,2); System.out.print(" --> " + Arr.getMedian(fArr));
                 System.out.println();
-                System.out.print("Double: "); Arr.print(dArr,3); System.out.print(" --> " + Arr.median(dArr));
+                System.out.print("Double: "); Arr.print(dArr,3); System.out.print(" --> " + Arr.getMedian(dArr));
                 System.out.println();
-                System.out.print("Char: "); Arr.print(cArr); System.out.print(" --> " + Arr.median(cArr));
+                System.out.print("Char: "); Arr.print(cArr); System.out.print(" --> " + Arr.getMedian(cArr));
                 System.out.println();
-                System.out.print("Boolean: "); Arr.print(boolArr); System.out.print(" --> " + Arr.median(boolArr));
+                System.out.print("Boolean: "); Arr.print(boolArr); System.out.print(" --> " + Arr.getMedian(boolArr));
                 System.out.println();
-                System.out.print("String: "); Arr.print(stringArr); System.out.print(" --> " + Arr.median(stringArr));
+                System.out.print("String: "); Arr.print(stringArr); System.out.print(" --> " + Arr.getMedian(stringArr));
+                System.out.println();
+                System.out.print("String (Ignore case): "); Arr.print(stringArr); System.out.print(" --> " + Arr.getMedianIgnoreCase(stringArr));
                 System.out.println("\n");
                 
                 System.out.println("--- AVERAGE ---");
-                System.out.print("Byte: "); Arr.print(bArr); System.out.print(" --> " + Arr.average(bArr) + " / " + Arr.averageRD(bArr));
+                System.out.print("Byte: "); Arr.print(bArr); System.out.print(" --> " + Arr.getAvarage(bArr) + " / " + Arr.getAvarageDouble(bArr));
                 System.out.println();
-                System.out.print("Short: "); Arr.print(sArr); System.out.print(" --> " + Arr.average(sArr) + " / " + Arr.averageRD(sArr));
+                System.out.print("Short: "); Arr.print(sArr); System.out.print(" --> " + Arr.getAvarage(sArr) + " / " + Arr.getAvarageDouble(sArr));
                 System.out.println();
-                System.out.print("Int: "); Arr.print(iArr); System.out.print(" --> " + Arr.average(iArr) + " / " + Arr.averageRD(iArr));
+                System.out.print("Int: "); Arr.print(iArr); System.out.print(" --> " + Arr.getAvarage(iArr) + " / " + Arr.getAvarageDouble(iArr));
                 System.out.println();
-                System.out.print("Long: "); Arr.print(lArr); System.out.print(" --> " + Arr.average(lArr) + " / " + Arr.averageRD(lArr));
+                System.out.print("Long: "); Arr.print(lArr); System.out.print(" --> " + Arr.getAvarage(lArr) + " / " + Arr.getAvarageDouble(lArr));
                 System.out.println();
-                System.out.print("Float: "); Arr.print(fArr,2); System.out.print(" --> " + Arr.average(fArr) + " / " + Arr.averageRD(fArr));
+                System.out.print("Float: "); Arr.print(fArr,2); System.out.print(" --> " + Arr.getAvarage(fArr) + " / " + Arr.getAvarageDouble(fArr));
                 System.out.println();
-                System.out.print("Double: "); Arr.print(dArr,3); System.out.print(" --> " + Arr.average(dArr) + " / " + Arr.averageRD(dArr));
+                System.out.print("Double: "); Arr.print(dArr,3); System.out.print(" --> " + Arr.getAvarage(dArr) + " / " + Arr.getAvarageDouble(dArr));
                 System.out.println();
-                System.out.print("Char: "); Arr.print(cArr); System.out.print(" --> " + Arr.average(cArr) + " / " + Arr.averageRD(cArr));
+                System.out.print("Char: "); Arr.print(cArr); System.out.print(" --> " + Arr.getAvarage(cArr) + " / " + Arr.getAvarageDouble(cArr));
                 System.out.println("\n");
         }
         
         public static void tot(){
                 System.out.println("--- TOT ---");
-                System.out.print("Byte: "); Arr.print(bArr); System.out.print(" --> " + Arr.tot(bArr));
+                System.out.print("Byte: "); Arr.print(bArr); System.out.print(" --> " + Arr.getTot(bArr));
                 System.out.println();
-                System.out.print("Short: "); Arr.print(sArr); System.out.print(" --> " + Arr.tot(sArr));
+                System.out.print("Short: "); Arr.print(sArr); System.out.print(" --> " + Arr.getTot(sArr));
                 System.out.println();
-                System.out.print("Int: "); Arr.print(iArr); System.out.print(" --> " + Arr.tot(iArr));
+                System.out.print("Int: "); Arr.print(iArr); System.out.print(" --> " + Arr.getTot(iArr));
                 System.out.println();
-                System.out.print("Long: "); Arr.print(lArr); System.out.print(" --> " + Arr.tot(lArr));
+                System.out.print("Long: "); Arr.print(lArr); System.out.print(" --> " + Arr.getTot(lArr));
                 System.out.println();
-                System.out.print("Float: "); Arr.print(fArr,2); System.out.print(" --> " + Arr.tot(fArr));
+                System.out.print("Float: "); Arr.print(fArr,2); System.out.print(" --> " + Arr.getTot(fArr));
                 System.out.println();
-                System.out.print("Double: "); Arr.print(dArr,3); System.out.print(" --> " + Arr.tot(dArr));
+                System.out.print("Double: "); Arr.print(dArr,3); System.out.print(" --> " + Arr.getTot(dArr));
                 System.out.println();
-                System.out.print("String: "); Arr.print(stringArr); System.out.print(" --> " + Arr.tot(stringArr));
+                System.out.print("String: "); Arr.print(stringArr); System.out.print(" --> " + Arr.getTot(stringArr));
                 System.out.println("\n");
         }
 }
