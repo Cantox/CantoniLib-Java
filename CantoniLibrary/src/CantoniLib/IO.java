@@ -20,8 +20,7 @@ public class IO {
             
             try ( BufferedReader file = new BufferedReader( new FileReader(filePath) ) ){
                   String row;
-                  while( (row = file.readLine()) != null) 
-                        rows.add(row);
+                  while( (row = file.readLine()) != null) rows.add(row);
             }
             catch (IOException e) { System.out.println("Error reading file: " + e.getMessage()); return new String[0]; }
             
@@ -32,8 +31,7 @@ public class IO {
             
             try ( BufferedReader file = new BufferedReader( new FileReader(filePath) ) ){
                   String row;
-                  while( (row = file.readLine()) != null) 
-                        fileContent = fileContent.concat(row + lineSeparator);
+                  while( (row = file.readLine()) != null) fileContent = fileContent.concat(row + lineSeparator);
             }
             catch (IOException e) { System.out.println("Error reading file: " + e.getMessage()); return ""; }
             
@@ -42,8 +40,7 @@ public class IO {
       
       public static void writeFile(String filePath, String[] rows) {
             try ( PrintWriter file = new PrintWriter( new FileWriter(filePath) ) ) {
-                  for (String row : rows) 
-                        file.println(row);
+                  for (String row : rows) file.println(row);
             }
             catch (IOException e) { System.err.println("Error writing file: " + e.getMessage()); }
       }
@@ -59,8 +56,7 @@ public class IO {
             
             try ( FileInputStream in = new FileInputStream(filePath) ) {
                   int byteRead;
-                  while ( (byteRead = in.read()) != -1 ) 
-                        bytes.add(byteRead);
+                  while ( (byteRead = in.read()) != -1 ) bytes.add(byteRead);
             } 
             catch (IOException e) { System.err.println("Error reading file: " + e.getMessage()); }
             
@@ -73,8 +69,7 @@ public class IO {
             
             try ( FileInputStream in = new FileInputStream(filePath) ) {
                   int byteRead;
-                  while ( (byteRead = in.read()) != -1 ) 
-                        fileContent = fileContent.concat(Integer.toString(byteRead) + byteSeparator);
+                  while ( (byteRead = in.read()) != -1 ) fileContent = fileContent.concat(Integer.toString(byteRead) + byteSeparator);
             } 
             catch (IOException e) { System.err.println("Error reading file: " + e.getMessage()); }
             
@@ -83,8 +78,7 @@ public class IO {
       
       public static void writeBinFile(String filePath, int[] bytes) {
             try ( FileOutputStream out = new FileOutputStream(filePath) ) {
-                  for (int b : bytes)
-                        out.write(b);
+                  for (int b : bytes) out.write(b);
             }
             catch (IOException e) { System.err.println("Error writing file: " + e.getMessage()); }
       }

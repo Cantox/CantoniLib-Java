@@ -22,13 +22,6 @@ public class Arr {
                 return r.nextInt((max-min) + 1) + min;
         }
         
-        /**
-        * Prints the elements of a byte array to the standard output.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Elements are separated by a comma and a space (", ").
-        *
-        * @param vett The byte array to be printed.
-        */
         public static void print(byte[] vett){
                 if (vett == null) {
                         System.out.print("null");
@@ -43,14 +36,6 @@ public class Arr {
                 for(int i=1; i<vett.length; i++)
                         System.out.print(", " + vett[i]);
         }
-        /**
-        * Prints the elements of a byte array using a custom separator.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * If the separator is null, it defaults to ", ".
-        *
-        * @param vett       The byte array to be printed.
-        * @param separation The string to print between elements.
-        */
         public static void print(byte[] vett, String separation){
                 if (vett == null) {
                         System.out.print("null");
@@ -66,14 +51,6 @@ public class Arr {
                 for(int i=1; i<vett.length; i++)
                         System.out.print(separation + vett[i]);
         }
-        /**
-        * Prints the elements of a byte array with right-alignment.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Each element is padded with spaces to meet the specified minimum width.
-        *
-        * @param vett  The byte array to be printed.
-        * @param width The minimum character width for each element.
-        */
         public static void print(byte[] vett, int width){
                 if (vett == null) {
                         System.out.print("null");
@@ -93,15 +70,6 @@ public class Arr {
                         System.out.print(", " + " ".repeat(padding) + s);
                 }
         }
-        /**
-        * Prints the elements of a byte array with custom alignment and a custom separator.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * This is the most flexible version of the print method.
-        *
-        * @param vett       The byte array to be printed.
-        * @param width      The minimum character width for each element.
-        * @param separation The string to print between elements.
-        */
         public static void print(byte[] vett, int width, String separation){
                 if (vett == null) {
                         System.out.print("null");
@@ -123,13 +91,6 @@ public class Arr {
                 }
         }
         
-        /**
-        * Prints the elements of a short array to the standard output.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Elements are separated by a comma and a space (", ").
-        *
-        * @param vett The short array to be printed.
-        */
         public static void print(short[] vett){
                 if (vett == null) {
                         System.out.print("null");
@@ -199,13 +160,6 @@ public class Arr {
                 }
         }
         
-        /**
-        * Prints the elements of an int array to the standard output.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Elements are separated by a comma and a space (", ").
-        *
-        * @param vett The int array to be printed.
-        */
         public static void print(int[] vett){
                 if (vett == null) {
                         System.out.print("null");
@@ -275,13 +229,6 @@ public class Arr {
                 }
         }
         
-        /**
-        * Prints the elements of a long array to the standard output.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Elements are separated by a comma and a space (", ").
-        *
-        * @param vett The long array to be printed.
-        */
         public static void print(long[] vett){
                 if (vett == null) {
                         System.out.print("null");
@@ -351,13 +298,6 @@ public class Arr {
                 }
         }
         
-        /**
-        * Prints the elements of a float array to the standard output.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Elements are separated by a comma and a space (", ").
-        *
-        * @param vett The float array to be printed.
-        */
         public static void print(float[] vett){
                 if (vett == null) {
                         System.out.print("null");
@@ -469,13 +409,6 @@ public class Arr {
                 }
         }
         
-        /**
-        * Prints the elements of a double array to the standard output.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Elements are separated by a comma and a space (", ").
-        *
-        * @param vett The double array to be printed.
-        */
         public static void print(double[] vett){
                 if (vett == null) {
                         System.out.print("null");
@@ -587,13 +520,6 @@ public class Arr {
                 }
         }
         
-        /**
-        * Prints the elements of a char array to the standard output.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Elements are separated by a comma and a space (", ").
-        *
-        * @param vett The char array to be printed.
-        */
         public static void print(char[] vett){
                 if (vett == null) {
                         System.out.print("null");
@@ -663,13 +589,6 @@ public class Arr {
                 }
         }
         
-        /**
-        * Prints the elements of a boolean array to the standard output.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Elements are separated by a comma and a space (", ").
-        *
-        * @param vett The boolean array to be printed.
-        */
         public static void print(boolean[] vett){
                 if (vett == null) {
                         System.out.print("null");
@@ -700,13 +619,6 @@ public class Arr {
                         System.out.print(separation + vett[i]);
         }
         
-        /**
-        * Prints the elements of a String array to the standard output.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Elements are separated by a comma and a space (", ").
-        *
-        * @param vett The String array to be printed.
-        */
         public static void print(String[] vett){
                 if (vett == null) {
                         System.out.print("null");
@@ -737,13 +649,6 @@ public class Arr {
                         System.out.print(separation + vett[i]);
         }
         
-        /**
-        * Prints the elements of an Object array to the standard output.
-        * If the array is null, "null" is printed. If empty, "[]" is printed.
-        * Elements are separated by a comma and a space (", ").
-        *
-        * @param vett The Object array to be printed.
-        */
         public static <T> void print(T[] vett){
                 if (vett == null) {
                         System.out.print("null");
