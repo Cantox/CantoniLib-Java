@@ -10,4 +10,12 @@ public final class Arr {
       * @author Cantoni Alessandro
       */
       public static final class Sorts extends arr.Sorts {}
+      
+      /**
+      * Array utility class with methods to print the array
+      * in console
+      * 
+      * @author Cantoni Alessandro
+      */
+      public static final class Console extends arr.Console {}
 }
