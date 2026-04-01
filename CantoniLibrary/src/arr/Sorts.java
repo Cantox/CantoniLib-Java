@@ -46,11 +46,6 @@ public class Sorts {
             arr[index1] = arr[index2];
             arr[index2] = temp;
       }
-      private static void swap(int index1, int index2, String[] arr){
-            String temp = arr[index1];
-            arr[index1] = arr[index2];
-            arr[index2] = temp;
-      }
       private static <T> void swap(int index1, int index2, T[] arr){
             T temp = arr[index1];
             arr[index1] = arr[index2];
@@ -65,6 +60,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static byte[] sorted(byte[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             byte[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             return res;
@@ -77,6 +73,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static short[] sorted(short[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             short[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             return res;
@@ -89,6 +86,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static int[] sorted(int[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             int[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             return res;
@@ -101,6 +99,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static long[] sorted(long[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             long[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             return res;
@@ -113,6 +112,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static float[] sorted(float[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             float[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             return res;
@@ -125,6 +125,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static double[] sorted(double[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             double[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             return res;
@@ -137,6 +138,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static boolean[] sorted(boolean[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             boolean[] res = arr.clone();
             int falseCount = 0;
             for(boolean e : res) if(!e) falseCount++;
@@ -152,6 +154,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static char[] sorted(char[] arr, boolean caseSensitive) {
+            if(arr == null || arr.length < 2) return arr;
             char[] res = arr.clone();
             quickSort(res, 0, res.length-1, caseSensitive);
             return res;
@@ -165,6 +168,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static String[] sorted(String[] arr, boolean caseSensitive) {
+            if(arr == null || arr.length < 2) return arr;
             String[] res = arr.clone();
             quickSort(res, 0, res.length-1, caseSensitive);
             return res;
@@ -179,6 +183,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static <T> T[] sorted(T[] arr, Comparator<T> comparator) {
+            if(arr == null || arr.length < 2) return arr;
             T[] res = arr.clone();
             quickSort(res, 0, res.length-1, comparator);
             return res;
@@ -192,6 +197,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static byte[] sortedDesc(byte[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             byte[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             for(int i=0; i<(res.length/2)+1; i++)
@@ -206,6 +212,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static short[] sortedDesc(short[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             short[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             for(int i=0; i<(res.length/2)+1; i++)
@@ -220,6 +227,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static int[] sortedDesc(int[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             int[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             for(int i=0; i<(res.length/2)+1; i++)
@@ -234,6 +242,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static long[] sortedDesc(long[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             long[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             for(int i=0; i<(res.length/2)+1; i++)
@@ -248,6 +257,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static float[] sortedDesc(float[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             float[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             for(int i=0; i<(res.length/2)+1; i++)
@@ -262,6 +272,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static double[] sortedDesc(double[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             double[] res = arr.clone();
             quickSort(res, 0, res.length-1);
             for(int i=0; i<(res.length/2)+1; i++)
@@ -276,6 +287,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static boolean[] sortedDesc(boolean[] arr) {
+            if(arr == null || arr.length < 2) return arr;
             boolean[] res = arr.clone();
             int falseCount = 0;
             for(boolean e : res) if(!e) falseCount++;
@@ -291,6 +303,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static char[] sortedDesc(char[] arr, boolean caseSensitive) {
+            if(arr == null || arr.length < 2) return arr;
             char[] res = arr.clone();
             quickSort(res, 0, res.length-1, caseSensitive);
             for(int i=0; i<(res.length/2)+1; i++)
@@ -306,6 +319,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static String[] sortedDesc(String[] arr, boolean caseSensitive) {
+            if(arr == null || arr.length < 2) return arr;
             String[] res = arr.clone();
             quickSort(res, 0, res.length-1, caseSensitive);
             for(int i=0; i<(res.length/2)+1; i++)
@@ -322,6 +336,7 @@ public class Sorts {
        * @return a sorted copy of the array
        */
       public static <T> T[] sortedDesc(T[] arr, Comparator<T> comparator) {
+            if(arr == null || arr.length < 2) return arr;
             T[] res = arr.clone();
             quickSort(res, 0, res.length-1, comparator);
             for(int i=0; i<(res.length/2)+1; i++)

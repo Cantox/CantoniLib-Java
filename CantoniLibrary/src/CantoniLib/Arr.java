@@ -18,4 +18,12 @@ public final class Arr {
       * @author Cantoni Alessandro
       */
       public static final class Console extends arr.Console {}
+      
+      /**
+      * Array utility class that allows peremutations of
+      * the arrat
+      * 
+      * @author Cantoni Alessandro
+      */
+      public static final class Perm extends arr.Perm {}
 }
