@@ -2,3 +2,6 @@ CantoniLibrary/*
 !CantoniLibrary/src
 !CantoniLibrary/src/**
 !CantoniLibrary/src/**/*.java
+!CantoniLibrary/test
+!CantoniLibrary/test/**
+!CantoniLibrary/test/**/*.java
