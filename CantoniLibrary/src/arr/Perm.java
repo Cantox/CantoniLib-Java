@@ -714,7 +714,7 @@ public class Perm {
       public static byte[] shiftedR(byte[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             byte[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   byte buffer = res[res.length-1];
                   for(int i=res.length-2; i>=0; i--) swap(i, i+1, res );
                   res[0] = buffer;
@@ -734,7 +734,7 @@ public class Perm {
       public static short[] shiftedR(short[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             short[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   short buffer = res[res.length-1];
                   for(int i=res.length-2; i>=0; i--) swap(i, i+1, res );
                   res[0] = buffer;
@@ -754,7 +754,7 @@ public class Perm {
       public static int[] shiftedR(int[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             int[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   int buffer = res[res.length-1];
                   for(int i=res.length-2; i>=0; i--) swap(i, i+1, res );
                   res[0] = buffer;
@@ -774,7 +774,7 @@ public class Perm {
       public static long[] shiftedR(long[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             long[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   long buffer = res[res.length-1];
                   for(int i=res.length-2; i>=0; i--) swap(i, i+1, res );
                   res[0] = buffer;
@@ -794,7 +794,7 @@ public class Perm {
       public static float[] shiftedR(float[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             float[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   float buffer = res[res.length-1];
                   for(int i=res.length-2; i>=0; i--) swap(i, i+1, res );
                   res[0] = buffer;
@@ -814,7 +814,7 @@ public class Perm {
       public static double[] shiftedR(double[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             double[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   double buffer = res[res.length-1];
                   for(int i=res.length-2; i>=0; i--) swap(i, i+1, res );
                   res[0] = buffer;
@@ -834,7 +834,7 @@ public class Perm {
       public static char[] shiftedR(char[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             char[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   char buffer = res[res.length-1];
                   for(int i=res.length-2; i>=0; i--) swap(i, i+1, res );
                   res[0] = buffer;
@@ -854,7 +854,7 @@ public class Perm {
       public static boolean[] shiftedR(boolean[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             boolean[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   boolean buffer = res[res.length-1];
                   for(int i=res.length-2; i>=0; i--) swap(i, i+1, res );
                   res[0] = buffer;
@@ -875,7 +875,7 @@ public class Perm {
       public static <T> T[] shiftedR(T[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             T[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   T buffer = res[res.length-1];
                   for(int i=res.length-2; i>=0; i--) swap(i, i+1, res );
                   res[0] = buffer;
@@ -1052,7 +1052,7 @@ public class Perm {
       public static byte[] shiftedL(byte[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             byte[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   byte buffer = res[0];
                   for(int i=1; i<arr.length; i++) swap(i, i-1, res );
                   res[arr.length-1] = buffer;
@@ -1072,7 +1072,7 @@ public class Perm {
       public static short[] shiftedL(short[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             short[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   short buffer = res[0];
                   for(int i=1; i<arr.length; i++) swap(i, i-1, res );
                   res[arr.length-1] = buffer;
@@ -1092,7 +1092,7 @@ public class Perm {
       public static int[] shiftedL(int[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             int[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   int buffer = res[0];
                   for(int i=1; i<arr.length; i++) swap(i, i-1, res );
                   res[arr.length-1] = buffer;
@@ -1112,7 +1112,7 @@ public class Perm {
       public static long[] shiftedL(long[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             long[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   long buffer = res[0];
                   for(int i=1; i<arr.length; i++) swap(i, i-1, res );
                   res[arr.length-1] = buffer;
@@ -1132,7 +1132,7 @@ public class Perm {
       public static float[] shiftedL(float[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             float[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   float buffer = res[0];
                   for(int i=1; i<arr.length; i++) swap(i, i-1, res );
                   res[arr.length-1] = buffer;
@@ -1152,7 +1152,7 @@ public class Perm {
       public static double[] shiftedL(double[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             double[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   double buffer = res[0];
                   for(int i=1; i<arr.length; i++) swap(i, i-1, res );
                   res[arr.length-1] = buffer;
@@ -1172,7 +1172,7 @@ public class Perm {
       public static char[] shiftedL(char[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             char[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   char buffer = res[0];
                   for(int i=1; i<arr.length; i++) swap(i, i-1, res );
                   res[arr.length-1] = buffer;
@@ -1192,7 +1192,7 @@ public class Perm {
       public static boolean[] shiftedL(boolean[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             boolean[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   boolean buffer = res[0];
                   for(int i=1; i<arr.length; i++) swap(i, i-1, res );
                   res[arr.length-1] = buffer;
@@ -1213,7 +1213,7 @@ public class Perm {
       public static <T> T[] shiftedL(T[] arr, int shifts){
             if(arr == null || arr.length < 2 || shifts%arr.length == 0) return arr;
             T[] res = arr.clone();
-            for(int s=0; s<shifts; s++) {
+            for(int s=0; s<shifts%res.length; s++) {
                   T buffer = res[0];
                   for(int i=1; i<arr.length; i++) swap(i, i-1, res );
                   res[arr.length-1] = buffer;

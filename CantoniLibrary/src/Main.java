@@ -13,6 +13,6 @@ public class Main {
             System.out.println();
             
             byte[] arr3 = {1,2,3};
-            Arr.Console.print(Arr.Perm.shiftedL(arr3));
+            Arr.Console.print(Arr.Perm.shiftedR(arr3,4));
         }
 }

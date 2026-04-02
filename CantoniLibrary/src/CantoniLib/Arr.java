@@ -26,4 +26,13 @@ public final class Arr {
       * @author Cantoni Alessandro
       */
       public static final class Perm extends arr.Perm {}
+      
+      /**
+      * Array utility class used to do operations
+      * on the elements of the array or get informations
+      * about them
+      * 
+      * @author Cantoni Alessandro
+      */
+      public static final class Operations extends arr.Operations {}
 }
