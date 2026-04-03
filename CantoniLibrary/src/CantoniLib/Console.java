@@ -1,5 +1,11 @@
 package CantoniLib;
 
+/**
+ * Library containing various methods used to 
+ * work with the console
+ * 
+ * @author Cantoni Alessandro
+ */
 public class Console {
       private Console() {}
       

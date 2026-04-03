@@ -1,5 +1,10 @@
 package CantoniLib;
 
+/**
+ * Class used to synchronize threads
+ * 
+ * @author Cantoni Alessandro
+ */
 public class Semaphore {
       private int value;
 

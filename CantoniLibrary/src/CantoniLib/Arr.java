@@ -1,5 +1,11 @@
 package CantoniLib;
 
+/**
+ * Library containing various methods used to 
+ * work with arrays
+ * 
+ * @author Cantoni Alessandro
+ */
 public final class Arr {
       private Arr() {}
       

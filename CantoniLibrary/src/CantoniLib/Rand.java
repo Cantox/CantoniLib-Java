@@ -1,5 +1,11 @@
 package CantoniLib;
 
+/**
+ * Library containing various methods used to 
+ * work with random values
+ * 
+ * @author Cantoni Alessandro
+ */
 public class Rand {
       private Rand() {}
       

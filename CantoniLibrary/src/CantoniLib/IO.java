@@ -1,5 +1,11 @@
 package CantoniLib;
 
+/**
+ * Library containing various methods used to 
+ * work with files
+ * 
+ * @author Cantoni Alessandro
+ */
 public class IO {
       private IO() {}
       
