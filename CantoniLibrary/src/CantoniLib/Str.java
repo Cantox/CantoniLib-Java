@@ -16,4 +16,12 @@ public class Str {
       * @author Cantoni Alessandro
       */
       public static final class Modify extends str.Modify {}
+      
+      /**
+      * Utility class containing methods to 
+      * obtain informations about a string or its content
+      * 
+      * @author Cantoni Alessandro
+      */
+      public static final class Checks extends str.Checks {}
 }
